@@ -12,38 +12,38 @@ Fecha: `2026-06-11`
 
 ### Final 1X2
 
-- Mexico: **66.3%**
-- Empate: **21.9%**
-- South Africa: **11.9%**
-- Pick: **HOME** (66.3%)
+- Mexico: **66.9%**
+- Empate: **21.6%**
+- South Africa: **11.5%**
+- Pick: **HOME** (66.9%)
 
 ### Goles esperados
 
-- Mexico: `1.917`
-- South Africa: `0.739`
+- Mexico: `1.928`
+- South Africa: `0.704`
 
 ### Top scores
 
-1. `2-0` → **12.9%**
-2. `1-0` → **12.5%**
-3. `1-1` → **10.9%**
-4. `2-1` → **9.5%**
-5. `3-0` → **8.2%**
+1. `2-0` → **13.4%**
+2. `1-0` → **12.9%**
+3. `1-1` → **10.7%**
+4. `2-1` → **9.4%**
+5. `3-0` → **8.6%**
 
 ### Mercados derivados
 
-- Over 2.5: **49.6%**
-- Under 2.5: **50.4%**
-- BTTS Sí: **45.6%**
-- BTTS No: **54.4%**
+- Over 2.5: **49.0%**
+- Under 2.5: **51.0%**
+- BTTS Sí: **44.2%**
+- BTTS No: **55.8%**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Mexico: **64.4%**
-- Empate: **22.9%**
-- South Africa: **12.7%**
-- Goles promedio: `2.656`
+- Mexico: **65.6%**
+- Empate: **22.6%**
+- South Africa: **11.8%**
+- Goles promedio: `2.632`
 
 ---
 
@@ -55,37 +55,37 @@ Fecha: `2026-06-11`
 
 ### Final 1X2
 
-- South Korea: **48.6%**
-- Empate: **27.8%**
-- Czechia: **23.6%**
-- Pick: **HOME** (48.6%)
+- South Korea: **49.0%**
+- Empate: **27.4%**
+- Czechia: **23.5%**
+- Pick: **HOME** (49.0%)
 
 ### Goles esperados
 
-- South Korea: `1.517`
-- Czechia: `1.051`
+- South Korea: `1.561`
+- Czechia: `1.066`
 
 ### Top scores
 
-1. `1-1` → **13.4%**
-2. `1-0` → **10.4%**
-3. `2-1` → **9.3%**
-4. `0-0` → **8.9%**
-5. `2-0` → **8.8%**
+1. `1-1` → **13.2%**
+2. `1-0` → **10.1%**
+3. `2-1` → **9.4%**
+4. `2-0` → **8.8%**
+5. `0-0` → **8.4%**
 
 ### Mercados derivados
 
-- Over 2.5: **47.4%**
-- Under 2.5: **52.6%**
-- BTTS Sí: **52.0%**
-- BTTS No: **48.0%**
+- Over 2.5: **48.8%**
+- Under 2.5: **51.2%**
+- BTTS Sí: **53.0%**
+- BTTS No: **47.0%**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- South Korea: **46.8%**
-- Empate: **28.1%**
-- Czechia: **25.1%**
-- Goles promedio: `2.570`
+- South Korea: **47.7%**
+- Empate: **27.5%**
+- Czechia: **24.8%**
+- Goles promedio: `2.627`
 
 ---

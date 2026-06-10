@@ -106,11 +106,139 @@ def save_processed_matches(df: pd.DataFrame) -> Path:
     df.to_parquet(out, index=False)
     return out
 
+def load_worldcup_results() -> pd.DataFrame:
+    path = MASTER_DIR / "worldcup_results.csv"
+
+    if not path.exists():
+        return pd.DataFrame(columns=[
+            "date",
+            "home_team",
+            "away_team",
+            "home_score",
+            "away_score",
+            "tournament",
+            "city",
+            "country",
+            "neutral",
+        ])
+
+    df = pd.read_csv(path)
+
+    if df.empty:
+        return df
+
+    required = [
+        "date",
+        "home_team",
+        "away_team",
+        "home_score",
+        "away_score",
+        "tournament",
+        "city",
+        "country",
+        "neutral",
+    ]
+
+    missing = [c for c in required if c not in df.columns]
+
+    if missing:
+        raise ValueError(f"worldcup_results.csv faltan columnas: {missing}")
+
+    return df
+
+def load_worldcup_results() -> pd.DataFrame:
+    path = MASTER_DIR / "worldcup_results.csv"
+
+    if not path.exists():
+        return pd.DataFrame(columns=[
+            "date",
+            "home_team",
+            "away_team",
+            "home_score",
+            "away_score",
+            "tournament",
+            "city",
+            "country",
+            "neutral",
+        ])
+
+    df = pd.read_csv(path)
+
+    if df.empty:
+        return df
+
+    required = [
+        "date",
+        "home_team",
+        "away_team",
+        "home_score",
+        "away_score",
+        "tournament",
+        "city",
+        "country",
+        "neutral",
+    ]
+
+    missing = [c for c in required if c not in df.columns]
+
+    if missing:
+        raise ValueError(f"worldcup_results.csv faltan columnas: {missing}")
+
+    return df
 
 def build_matches_dataset() -> pd.DataFrame:
-    df = load_international_results()
+    historical = load_international_results()
+    worldcup_new = load_worldcup_results()
+
+    if not worldcup_new.empty:
+        aliases = load_team_aliases()
+
+        worldcup_new["date"] = pd.to_datetime(worldcup_new["date"], errors="coerce")
+        worldcup_new = worldcup_new.dropna(subset=["date"])
+
+        worldcup_new["home_team"] = worldcup_new["home_team"].apply(
+            lambda x: canonical_team(x, aliases)
+        )
+        worldcup_new["away_team"] = worldcup_new["away_team"].apply(
+            lambda x: canonical_team(x, aliases)
+        )
+
+        worldcup_new["home_score"] = pd.to_numeric(
+            worldcup_new["home_score"],
+            errors="coerce",
+        )
+        worldcup_new["away_score"] = pd.to_numeric(
+            worldcup_new["away_score"],
+            errors="coerce",
+        )
+
+        worldcup_new = worldcup_new.dropna(subset=["home_score", "away_score"])
+
+        worldcup_new["home_score"] = worldcup_new["home_score"].astype(int)
+        worldcup_new["away_score"] = worldcup_new["away_score"].astype(int)
+
+        worldcup_new["neutral"] = worldcup_new["neutral"].astype(bool)
+
+        df = pd.concat([historical, worldcup_new], ignore_index=True)
+    else:
+        df = historical
+
+    df = df.drop_duplicates(
+        subset=[
+            "date",
+            "home_team",
+            "away_team",
+            "home_score",
+            "away_score",
+            "tournament",
+        ],
+        keep="last",
+    )
+
+    df = df.sort_values("date").reset_index(drop=True)
     df = add_targets(df)
     save_processed_matches(df)
+
     return df
 
 

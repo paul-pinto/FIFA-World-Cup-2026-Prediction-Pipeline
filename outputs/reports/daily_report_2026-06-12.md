@@ -12,38 +12,38 @@ Fecha: `2026-06-12`
 
 ### Final 1X2
 
-- Canada: **53.6%**
-- Empate: **29.2%**
-- Qatar: **17.2%**
-- Pick: **HOME** (53.6%)
+- Canada: **53.0%**
+- Empate: **30.9%**
+- Qatar: **16.1%**
+- Pick: **HOME** (53.0%)
 
 ### Goles esperados
 
-- Canada: `1.730`
-- Qatar: `0.864`
+- Canada: `1.721`
+- Qatar: `0.843`
 
 ### Top scores
 
 1. `1-1` → **12.3%**
-2. `1-0` → **11.8%**
-3. `2-0` → **11.2%**
-4. `2-1` → **9.7%**
-5. `0-0` → **8.6%**
+2. `1-0` → **12.1%**
+3. `2-0` → **11.4%**
+4. `2-1` → **9.6%**
+5. `0-0` → **8.8%**
 
 ### Mercados derivados
 
-- Over 2.5: **48.0%**
-- Under 2.5: **52.0%**
-- BTTS Sí: **48.7%**
-- BTTS No: **51.3%**
+- Over 2.5: **47.3%**
+- Under 2.5: **52.7%**
+- BTTS Sí: **47.9%**
+- BTTS No: **52.1%**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Canada: **56.9%**
-- Empate: **25.6%**
-- Qatar: **17.5%**
-- Goles promedio: `2.595`
+- Canada: **57.2%**
+- Empate: **25.7%**
+- Qatar: **17.1%**
+- Goles promedio: `2.564`
 
 ---
 
@@ -55,37 +55,37 @@ Fecha: `2026-06-12`
 
 ### Final 1X2
 
-- United States: **56.8%**
-- Empate: **23.4%**
-- Paraguay: **19.8%**
-- Pick: **HOME** (56.8%)
+- United States: **59.0%**
+- Empate: **23.0%**
+- Paraguay: **18.1%**
+- Pick: **HOME** (59.0%)
 
 ### Goles esperados
 
-- United States: `1.710`
-- Paraguay: `0.944`
+- United States: `1.703`
+- Paraguay: `0.860`
 
 ### Top scores
 
-1. `1-1` → **12.5%**
-2. `1-0` → **10.9%**
-3. `2-0` → **10.3%**
-4. `2-1` → **9.7%**
-5. `0-0` → **8.2%**
+1. `1-1` → **12.4%**
+2. `1-0` → **12.0%**
+3. `2-0` → **11.2%**
+4. `2-1` → **9.6%**
+5. `0-0` → **8.8%**
 
 ### Mercados derivados
 
-- Over 2.5: **49.5%**
-- Under 2.5: **50.5%**
-- BTTS Sí: **51.2%**
-- BTTS No: **48.8%**
+- Over 2.5: **47.2%**
+- Under 2.5: **52.8%**
+- BTTS Sí: **48.3%**
+- BTTS No: **51.7%**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- United States: **54.4%**
-- Empate: **25.9%**
-- Paraguay: **19.6%**
-- Goles promedio: `2.654`
+- United States: **56.3%**
+- Empate: **26.0%**
+- Paraguay: **17.7%**
+- Goles promedio: `2.563`
 
 ---
