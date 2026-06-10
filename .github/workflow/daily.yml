@@ -1,0 +1,23 @@
+on:
+  workflow_dispatch:
+    inputs:
+      eval_date:
+        description: "Date to evaluate YYYY-MM-DD"
+        required: false
+        default: ""
+      predict_date:
+        description: "Date to predict YYYY-MM-DD"
+        required: false
+        default: ""
+      fetch_odds:
+        description: "Fetch odds from The Odds API"
+        required: true
+        default: "true"
+      telegram:
+        description: "Send Telegram notification"
+        required: true
+        default: "true"
+
+  schedule:
+    # 10:00 Bolivia time = 14:00 UTC
+    - cron: "0 14 * * *"
