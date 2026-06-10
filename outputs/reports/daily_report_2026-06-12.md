@@ -12,38 +12,38 @@ Fecha: `2026-06-12`
 
 ### Final 1X2
 
-- Canada: **59.4%**
-- Empate: **28.8%**
-- Qatar: **11.8%**
-- Pick: **HOME** (59.4%)
+- Canada: **53.6%**
+- Empate: **29.2%**
+- Qatar: **17.2%**
+- Pick: **HOME** (53.6%)
 
 ### Goles esperados
 
-- Canada: `1.888`
-- Qatar: `0.734`
+- Canada: `1.730`
+- Qatar: `0.864`
 
 ### Top scores
 
-1. `2-0` → **12.9%**
-2. `1-0` → **12.7%**
-3. `1-1` → **11.1%**
-4. `2-1` → **9.5%**
-5. `0-0` → **8.3%**
+1. `1-1` → **12.3%**
+2. `1-0` → **11.8%**
+3. `2-0` → **11.2%**
+4. `2-1` → **9.7%**
+5. `0-0` → **8.6%**
 
 ### Mercados derivados
 
-- Over 2.5: **48.7%**
-- Under 2.5: **51.3%**
-- BTTS Sí: **45.2%**
-- BTTS No: **54.8%**
+- Over 2.5: **48.0%**
+- Under 2.5: **52.0%**
+- BTTS Sí: **48.7%**
+- BTTS No: **51.3%**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Canada: **64.0%**
-- Empate: **23.2%**
-- Qatar: **12.8%**
-- Goles promedio: `2.622`
+- Canada: **56.9%**
+- Empate: **25.6%**
+- Qatar: **17.5%**
+- Goles promedio: `2.595`
 
 ---
 
@@ -55,37 +55,37 @@ Fecha: `2026-06-12`
 
 ### Final 1X2
 
-- United States: **55.6%**
-- Empate: **22.5%**
-- Paraguay: **21.8%**
-- Pick: **HOME** (55.6%)
+- United States: **56.8%**
+- Empate: **23.4%**
+- Paraguay: **19.8%**
+- Pick: **HOME** (56.8%)
 
 ### Goles esperados
 
-- United States: `1.630`
-- Paraguay: `1.005`
+- United States: `1.710`
+- Paraguay: `0.944`
 
 ### Top scores
 
-1. `1-1` → **12.9%**
-2. `1-0` → **10.5%**
-3. `2-1` → **9.6%**
-4. `2-0` → **9.5%**
-5. `0-0` → **8.3%**
+1. `1-1` → **12.5%**
+2. `1-0` → **10.9%**
+3. `2-0` → **10.3%**
+4. `2-1` → **9.7%**
+5. `0-0` → **8.2%**
 
 ### Mercados derivados
 
-- Over 2.5: **49.0%**
-- Under 2.5: **51.0%**
-- BTTS Sí: **52.1%**
-- BTTS No: **47.9%**
+- Over 2.5: **49.5%**
+- Under 2.5: **50.5%**
+- BTTS Sí: **51.2%**
+- BTTS No: **48.8%**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- United States: **50.9%**
-- Empate: **26.9%**
-- Paraguay: **22.2%**
-- Goles promedio: `2.635`
+- United States: **54.4%**
+- Empate: **25.9%**
+- Paraguay: **19.6%**
+- Goles promedio: `2.654`
 
 ---
