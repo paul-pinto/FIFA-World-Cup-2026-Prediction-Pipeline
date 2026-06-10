@@ -145,7 +145,12 @@ def send_predictions(date_str: str | None = None):
     if date_str is None:
         date_str = latest_prediction_date()
 
-    msg = format_predictions_message(date_str)
+    try:
+        msg = format_predictions_message(date_str)
+    except FileNotFoundError as e:
+        print(f"[WARN] No hay predicciones para {date_str}. Se omite Telegram. {e}")
+        return
+
     send_telegram_message(msg)
 
     print(f"[OK] Enviado Telegram para {date_str}")

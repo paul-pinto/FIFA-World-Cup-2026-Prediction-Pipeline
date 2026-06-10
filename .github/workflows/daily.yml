@@ -21,8 +21,8 @@ on:
         default: "true"
 
   schedule:
-    # 10:00 Bolivia time = 14:00 UTC
-    - cron: "0 14 * * *"
+    # 09:00 Bolivia time = 13:00 UTC
+    - cron: "0 13 * * *"
 
 permissions:
   contents: write
@@ -57,30 +57,36 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install -r requirements.txt
 
-      - name: Compute dates
-        id: dates
-        shell: bash
-        run: |
-          INPUT_EVAL_DATE="${{ github.event.inputs.eval_date }}"
-          INPUT_PREDICT_DATE="${{ github.event.inputs.predict_date }}"
+            - name: Compute dates
+              id: dates
+              shell: bash
+              run: |
+                INPUT_EVAL_DATE="${{ github.event.inputs.eval_date }}"
+                INPUT_PREDICT_DATE="${{ github.event.inputs.predict_date }}"
 
-          if [ -n "$INPUT_EVAL_DATE" ]; then
-            EVAL_DATE="$INPUT_EVAL_DATE"
-          else
-            EVAL_DATE=$(date -u -d "yesterday" +%F)
-          fi
+                # Bolivia is UTC-4. We compute dates using Bolivia calendar day.
+                BOLIVIA_NOW=$(TZ=America/La_Paz date +%F)
+                BOLIVIA_YESTERDAY=$(TZ=America/La_Paz date -d "yesterday" +%F)
 
-          if [ -n "$INPUT_PREDICT_DATE" ]; then
-            PREDICT_DATE="$INPUT_PREDICT_DATE"
-          else
-            PREDICT_DATE=$(date -u +%F)
-          fi
+                if [ -n "$INPUT_EVAL_DATE" ]; then
+                  EVAL_DATE="$INPUT_EVAL_DATE"
+                else
+                  EVAL_DATE="$BOLIVIA_YESTERDAY"
+                fi
 
-          echo "eval_date=$EVAL_DATE" >> "$GITHUB_OUTPUT"
-          echo "predict_date=$PREDICT_DATE" >> "$GITHUB_OUTPUT"
+                if [ -n "$INPUT_PREDICT_DATE" ]; then
+                  PREDICT_DATE="$INPUT_PREDICT_DATE"
+                else
+                  PREDICT_DATE="$BOLIVIA_NOW"
+                fi
 
-          echo "Eval date: $EVAL_DATE"
-          echo "Predict date: $PREDICT_DATE"
+                echo "eval_date=$EVAL_DATE" >> "$GITHUB_OUTPUT"
+                echo "predict_date=$PREDICT_DATE" >> "$GITHUB_OUTPUT"
+
+                echo "Bolivia today: $BOLIVIA_NOW"
+                echo "Bolivia yesterday: $BOLIVIA_YESTERDAY"
+                echo "Eval date: $EVAL_DATE"
+                echo "Predict date: $PREDICT_DATE"
 
       - name: Run pipeline with odds and Telegram
         if: ${{ github.event_name == 'schedule' || (github.event.inputs.fetch_odds != 'false' && github.event.inputs.telegram != 'false') }}
