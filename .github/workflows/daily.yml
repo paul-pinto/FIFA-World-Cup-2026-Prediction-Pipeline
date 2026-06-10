@@ -1,3 +1,5 @@
+name: World Cup Daily Pipeline
+
 on:
   workflow_dispatch:
     inputs:
@@ -21,3 +23,114 @@ on:
   schedule:
     # 10:00 Bolivia time = 14:00 UTC
     - cron: "0 14 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    env:
+      THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      ODDS_SPORT_KEY: soccer_fifa_world_cup
+      ODDS_REGIONS: us,uk,eu
+      ODDS_MARKETS: h2h,totals
+      ODDS_FORMAT: decimal
+      N_SIM: 200000
+      MAX_GOALS: 10
+      SEED: 42
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements.txt
+
+      - name: Compute dates
+        id: dates
+        shell: bash
+        run: |
+          INPUT_EVAL_DATE="${{ github.event.inputs.eval_date }}"
+          INPUT_PREDICT_DATE="${{ github.event.inputs.predict_date }}"
+
+          if [ -n "$INPUT_EVAL_DATE" ]; then
+            EVAL_DATE="$INPUT_EVAL_DATE"
+          else
+            EVAL_DATE=$(date -u -d "yesterday" +%F)
+          fi
+
+          if [ -n "$INPUT_PREDICT_DATE" ]; then
+            PREDICT_DATE="$INPUT_PREDICT_DATE"
+          else
+            PREDICT_DATE=$(date -u +%F)
+          fi
+
+          echo "eval_date=$EVAL_DATE" >> "$GITHUB_OUTPUT"
+          echo "predict_date=$PREDICT_DATE" >> "$GITHUB_OUTPUT"
+
+          echo "Eval date: $EVAL_DATE"
+          echo "Predict date: $PREDICT_DATE"
+
+      - name: Run pipeline with odds and Telegram
+        if: ${{ github.event_name == 'schedule' || (github.event.inputs.fetch_odds != 'false' && github.event.inputs.telegram != 'false') }}
+        run: |
+          python -m src.pipeline full \
+            --eval-date "${{ steps.dates.outputs.eval_date }}" \
+            --predict-date "${{ steps.dates.outputs.predict_date }}" \
+            --fetch-odds \
+            --telegram
+
+      - name: Run pipeline with odds only
+        if: ${{ github.event_name != 'schedule' && github.event.inputs.fetch_odds != 'false' && github.event.inputs.telegram == 'false' }}
+        run: |
+          python -m src.pipeline full \
+            --eval-date "${{ steps.dates.outputs.eval_date }}" \
+            --predict-date "${{ steps.dates.outputs.predict_date }}" \
+            --fetch-odds
+
+      - name: Run pipeline with Telegram only
+        if: ${{ github.event_name != 'schedule' && github.event.inputs.fetch_odds == 'false' && github.event.inputs.telegram != 'false' }}
+        run: |
+          python -m src.pipeline full \
+            --eval-date "${{ steps.dates.outputs.eval_date }}" \
+            --predict-date "${{ steps.dates.outputs.predict_date }}" \
+            --telegram
+
+      - name: Run pipeline without odds or Telegram
+        if: ${{ github.event_name != 'schedule' && github.event.inputs.fetch_odds == 'false' && github.event.inputs.telegram == 'false' }}
+        run: |
+          python -m src.pipeline full \
+            --eval-date "${{ steps.dates.outputs.eval_date }}" \
+            --predict-date "${{ steps.dates.outputs.predict_date }}"
+
+      - name: Commit generated outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/master/manual_odds.csv || true
+          git add data/master/worldcup_results.csv || true
+          git add data/processed/odds_snapshots.csv || true
+          git add data/processed/*.parquet || true
+          git add models/*.pkl || true
+          git add models/*.json || true
+          git add outputs/daily/* || true
+          git add outputs/reports/* || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automated daily pipeline run"
+            git push
+          fi
