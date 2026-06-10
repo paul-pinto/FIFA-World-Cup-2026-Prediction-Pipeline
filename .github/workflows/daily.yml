@@ -21,8 +21,8 @@ on:
         default: "true"
 
   schedule:
-    # 09:00 Bolivia time = 13:00 UTC
-    - cron: "0 13 * * *"
+    # 10:00 Bolivia time = 14:00 UTC
+    - cron: "0 14 * * *"
 
 permissions:
   contents: write
@@ -57,68 +57,59 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install -r requirements.txt
 
-            - name: Compute dates
-              id: dates
-              shell: bash
-              run: |
-                INPUT_EVAL_DATE="${{ github.event.inputs.eval_date }}"
-                INPUT_PREDICT_DATE="${{ github.event.inputs.predict_date }}"
-
-                # Bolivia is UTC-4. We compute dates using Bolivia calendar day.
-                BOLIVIA_NOW=$(TZ=America/La_Paz date +%F)
-                BOLIVIA_YESTERDAY=$(TZ=America/La_Paz date -d "yesterday" +%F)
-
-                if [ -n "$INPUT_EVAL_DATE" ]; then
-                  EVAL_DATE="$INPUT_EVAL_DATE"
-                else
-                  EVAL_DATE="$BOLIVIA_YESTERDAY"
-                fi
-
-                if [ -n "$INPUT_PREDICT_DATE" ]; then
-                  PREDICT_DATE="$INPUT_PREDICT_DATE"
-                else
-                  PREDICT_DATE="$BOLIVIA_NOW"
-                fi
-
-                echo "eval_date=$EVAL_DATE" >> "$GITHUB_OUTPUT"
-                echo "predict_date=$PREDICT_DATE" >> "$GITHUB_OUTPUT"
-
-                echo "Bolivia today: $BOLIVIA_NOW"
-                echo "Bolivia yesterday: $BOLIVIA_YESTERDAY"
-                echo "Eval date: $EVAL_DATE"
-                echo "Predict date: $PREDICT_DATE"
-
-      - name: Run pipeline with odds and Telegram
-        if: ${{ github.event_name == 'schedule' || (github.event.inputs.fetch_odds != 'false' && github.event.inputs.telegram != 'false') }}
+      - name: Compute dates
+        id: dates
+        shell: bash
         run: |
-          python -m src.pipeline full \
-            --eval-date "${{ steps.dates.outputs.eval_date }}" \
-            --predict-date "${{ steps.dates.outputs.predict_date }}" \
-            --fetch-odds \
-            --telegram
+          INPUT_EVAL_DATE="${{ github.event.inputs.eval_date }}"
+          INPUT_PREDICT_DATE="${{ github.event.inputs.predict_date }}"
 
-      - name: Run pipeline with odds only
-        if: ${{ github.event_name != 'schedule' && github.event.inputs.fetch_odds != 'false' && github.event.inputs.telegram == 'false' }}
-        run: |
-          python -m src.pipeline full \
-            --eval-date "${{ steps.dates.outputs.eval_date }}" \
-            --predict-date "${{ steps.dates.outputs.predict_date }}" \
-            --fetch-odds
+          BOLIVIA_TODAY=$(TZ=America/La_Paz date +%F)
+          BOLIVIA_YESTERDAY=$(TZ=America/La_Paz date -d "yesterday" +%F)
 
-      - name: Run pipeline with Telegram only
-        if: ${{ github.event_name != 'schedule' && github.event.inputs.fetch_odds == 'false' && github.event.inputs.telegram != 'false' }}
-        run: |
-          python -m src.pipeline full \
-            --eval-date "${{ steps.dates.outputs.eval_date }}" \
-            --predict-date "${{ steps.dates.outputs.predict_date }}" \
-            --telegram
+          if [ -n "$INPUT_EVAL_DATE" ]; then
+            EVAL_DATE="$INPUT_EVAL_DATE"
+          else
+            EVAL_DATE="$BOLIVIA_YESTERDAY"
+          fi
 
-      - name: Run pipeline without odds or Telegram
-        if: ${{ github.event_name != 'schedule' && github.event.inputs.fetch_odds == 'false' && github.event.inputs.telegram == 'false' }}
+          if [ -n "$INPUT_PREDICT_DATE" ]; then
+            PREDICT_DATE="$INPUT_PREDICT_DATE"
+          else
+            PREDICT_DATE="$BOLIVIA_TODAY"
+          fi
+
+          echo "eval_date=$EVAL_DATE" >> "$GITHUB_OUTPUT"
+          echo "predict_date=$PREDICT_DATE" >> "$GITHUB_OUTPUT"
+
+          echo "Bolivia today: $BOLIVIA_TODAY"
+          echo "Bolivia yesterday: $BOLIVIA_YESTERDAY"
+          echo "Eval date: $EVAL_DATE"
+          echo "Predict date: $PREDICT_DATE"
+
+      - name: Run full pipeline
+        shell: bash
         run: |
-          python -m src.pipeline full \
-            --eval-date "${{ steps.dates.outputs.eval_date }}" \
-            --predict-date "${{ steps.dates.outputs.predict_date }}"
+          CMD="python -m src.pipeline full --eval-date ${{ steps.dates.outputs.eval_date }} --predict-date ${{ steps.dates.outputs.predict_date }}"
+
+          FETCH_ODDS="${{ github.event.inputs.fetch_odds }}"
+          TELEGRAM="${{ github.event.inputs.telegram }}"
+
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            FETCH_ODDS="true"
+            TELEGRAM="true"
+          fi
+
+          if [ "$FETCH_ODDS" != "false" ]; then
+            CMD="$CMD --fetch-odds"
+          fi
+
+          if [ "$TELEGRAM" != "false" ]; then
+            CMD="$CMD --telegram"
+          fi
+
+          echo "Running: $CMD"
+          $CMD
 
       - name: Commit generated outputs
         run: |
