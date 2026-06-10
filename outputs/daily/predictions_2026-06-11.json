@@ -1,0 +1,214 @@
+[
+  {
+    "home_team": "Mexico",
+    "away_team": "South Africa",
+    "neutral": 0,
+    "lambda_home": 1.9169093596677258,
+    "lambda_away": 0.7393275807356772,
+    "market": {
+      "p_home": 0.6150206978119456,
+      "p_draw": 0.23832052040212892,
+      "p_away": 0.1466587817859255,
+      "overround_1x2": 0.04900744416873448,
+      "p_over25": 0.48684210526315796,
+      "p_under25": 0.513157894736842,
+      "overround_ou25": 0.053361053361053346,
+      "lambda_total": 2.62,
+      "lambda_home": 1.8335931677018638,
+      "lambda_away": 0.7864068322981365
+    },
+    "ml": {
+      "p_home": 0.7318092532806558,
+      "p_draw": 0.18754457456136128,
+      "p_away": 0.08064617215798289,
+      "p_over25": 0.4836823840600147,
+      "p_btts_yes": 0.37689447879556204,
+      "lambda_home": 2.0187402609593343,
+      "lambda_away": 0.6817862732704488
+    },
+    "dixon_coles": {
+      "p_home": 0.6424964446759723,
+      "p_draw": 0.23094849463878725,
+      "p_away": 0.12655506068524003,
+      "p_over25": 0.4955922050970869,
+      "p_under25": 0.5044077949029131,
+      "p_btts_yes": 0.4556665485719878,
+      "p_btts_no": 0.5443334514280123
+    },
+    "monte_carlo": {
+      "n_sim": 200000,
+      "home_win": 0.644465,
+      "draw": 0.22899,
+      "away_win": 0.126545,
+      "over25": 0.495645,
+      "under25": 0.504355,
+      "btts_yes": 0.454655,
+      "btts_no": 0.545345,
+      "avg_home_goals": 1.917905,
+      "avg_away_goals": 0.737865,
+      "avg_total_goals": 2.65577
+    },
+    "final": {
+      "p_home": 0.662765628942001,
+      "p_draw": 0.21870593291702486,
+      "p_away": 0.11852843814097423,
+      "pick": "HOME",
+      "confidence": 0.662765628942001
+    },
+    "top_scores": [
+      {
+        "score": "2-0",
+        "probability": 0.12899906229924563
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1246400151703216
+      },
+      {
+        "score": "1-1",
+        "probability": 0.10945725793706211
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09537256464687217
+      },
+      {
+        "score": "3-0",
+        "probability": 0.08242650330326133
+      },
+      {
+        "score": "0-0",
+        "probability": 0.08016299108623076
+      },
+      {
+        "score": "3-1",
+        "probability": 0.0609401872757015
+      },
+      {
+        "score": "0-1",
+        "probability": 0.04195925320598854
+      },
+      {
+        "score": "4-0",
+        "probability": 0.03950103391667609
+      },
+      {
+        "score": "1-2",
+        "probability": 0.0367839862293496
+      }
+    ],
+    "match_id": "WC2026-001",
+    "date_utc": "2026-06-11T19:00:00+00:00",
+    "stage": "Group Stage",
+    "group": "A",
+    "venue": "Mexico City Stadium",
+    "city": "Mexico City",
+    "country": "Mexico"
+  },
+  {
+    "home_team": "South Korea",
+    "away_team": "Czechia",
+    "neutral": 1,
+    "lambda_home": 1.5173962026072432,
+    "lambda_away": 1.0511227169550192,
+    "market": {
+      "p_home": 0.4012133468149647,
+      "p_draw": 0.2946410515672397,
+      "p_away": 0.3041456016177958,
+      "overround_1x2": 0.06061256005490723,
+      "p_over25": 0.4545454545454546,
+      "p_under25": 0.5454545454545455,
+      "overround_ou25": 0.04761904761904745,
+      "lambda_total": 2.49,
+      "lambda_home": 1.3563646788990826,
+      "lambda_away": 1.1336353211009176
+    },
+    "ml": {
+      "p_home": 0.5959237959594534,
+      "p_draw": 0.2555421622836768,
+      "p_away": 0.1485340417568698,
+      "p_over25": 0.5023151307689514,
+      "p_btts_yes": 0.5179453631976264,
+      "lambda_home": 1.7142125093616614,
+      "lambda_away": 0.9502739785544767
+    },
+    "dixon_coles": {
+      "p_home": 0.4679755820231893,
+      "p_draw": 0.2816574923611196,
+      "p_away": 0.25036692561569135,
+      "p_over25": 0.473638545921968,
+      "p_under25": 0.5263614540780319,
+      "p_btts_yes": 0.5200469811965672,
+      "p_btts_no": 0.4799530188034328
+    },
+    "monte_carlo": {
+      "n_sim": 200000,
+      "home_win": 0.467765,
+      "draw": 0.280745,
+      "away_win": 0.25149,
+      "over25": 0.472835,
+      "under25": 0.527165,
+      "btts_yes": 0.51952,
+      "btts_no": 0.48048,
+      "avg_home_goals": 1.51724,
+      "avg_away_goals": 1.0529,
+      "avg_total_goals": 2.57014
+    },
+    "final": {
+      "p_home": 0.4860525628175918,
+      "p_draw": 0.2777105505164626,
+      "p_away": 0.23623688666594556,
+      "pick": "HOME",
+      "confidence": 0.4860525628175918
+    },
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13447816729293796
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1040816640359461
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09275302744722072
+      },
+      {
+        "score": "0-0",
+        "probability": 0.08887432117557359
+      },
+      {
+        "score": "2-0",
+        "probability": 0.0882418636293158
+      },
+      {
+        "score": "0-1",
+        "probability": 0.06834225213532714
+      },
+      {
+        "score": "1-2",
+        "probability": 0.06425138935276568
+      },
+      {
+        "score": "2-2",
+        "probability": 0.04874740710806305
+      },
+      {
+        "score": "3-1",
+        "probability": 0.046914363876246055
+      },
+      {
+        "score": "3-0",
+        "probability": 0.04463262292737001
+      }
+    ],
+    "match_id": "WC2026-002",
+    "date_utc": "2026-06-11T22:00:00+00:00",
+    "stage": "Group Stage",
+    "group": "B",
+    "venue": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico"
+  }
+]
