@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# dotenv files
+.env
+.env.local
+!.env.example
+
+# Logs and temporary files
+*.log
+logs/
+*.sqlite3
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary inspection files
+__gitcheck.txt
