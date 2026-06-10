@@ -64,9 +64,8 @@ def evaluate_date(target_date: str) -> tuple[pd.DataFrame, dict]:
     predictions_path = DAILY_OUTPUTS_DIR / f"predictions_{target_date}.csv"
 
     if not predictions_path.exists():
-        raise FileNotFoundError(
-            f"No existe {predictions_path}. Primero corre src.run_daily para esa fecha."
-        )
+        print(f"[WARN] No existe {predictions_path}. Se omite evaluación para {target_date}.")
+    return pd.DataFrame(), {}
 
     preds = pd.read_csv(predictions_path)
     results = load_manual_results()
