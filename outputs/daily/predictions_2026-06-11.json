@@ -3,19 +3,19 @@
     "home_team": "Mexico",
     "away_team": "South Africa",
     "neutral": 0,
-    "lambda_home": 1.9278280748485592,
-    "lambda_away": 0.7042589901269826,
+    "lambda_home": 1.8966801185003126,
+    "lambda_away": 0.6254069464752292,
     "market": {
-      "p_home": 0.6150206978119456,
-      "p_draw": 0.23832052040212892,
-      "p_away": 0.1466587817859255,
-      "overround_1x2": 0.04900744416873448,
-      "p_over25": 0.48684210526315796,
-      "p_under25": 0.513157894736842,
-      "overround_ou25": 0.053361053361053346,
-      "lambda_total": 2.62,
-      "lambda_home": 1.8335931677018638,
-      "lambda_away": 0.7864068322981365
+      "p_home": 0.6763791691201845,
+      "p_draw": 0.21390803982487508,
+      "p_away": 0.10971279105494054,
+      "overround_1x2": 0.0,
+      "p_over25": 0.4362191801516615,
+      "p_under25": 0.5637808198483386,
+      "overround_ou25": 0.0,
+      "lambda_total": 2.42,
+      "lambda_home": 1.7769605197959604,
+      "lambda_away": 0.6430394802040396
     },
     "ml": {
       "p_home": 0.7423105315265203,
@@ -27,148 +27,148 @@
       "lambda_away": 0.6038560719177943
     },
     "dixon_coles": {
-      "p_home": 0.653948630090956,
-      "p_draw": 0.22771226265354422,
-      "p_away": 0.11833910725549958,
-      "p_over25": 0.48959253597995045,
-      "p_under25": 0.5104074640200496,
-      "p_btts_yes": 0.4417547875153199,
-      "p_btts_no": 0.5582452124846802
+      "p_home": 0.6681728693941623,
+      "p_draw": 0.22683934093249802,
+      "p_away": 0.10498778967333929,
+      "p_over25": 0.4618371806479894,
+      "p_under25": 0.5381628193520106,
+      "p_btts_yes": 0.40470610161831144,
+      "p_btts_no": 0.5952938983816886
     },
     "monte_carlo": {
       "n_sim": 200000,
-      "home_win": 0.655855,
-      "draw": 0.22585,
-      "away_win": 0.118295,
-      "over25": 0.489275,
-      "under25": 0.510725,
-      "btts_yes": 0.440955,
-      "btts_no": 0.559045,
-      "avg_home_goals": 1.928645,
-      "avg_away_goals": 0.70321,
-      "avg_total_goals": 2.631855
+      "home_win": 0.66974,
+      "draw": 0.22509,
+      "away_win": 0.10517,
+      "over25": 0.462165,
+      "under25": 0.537835,
+      "btts_yes": 0.40342,
+      "btts_no": 0.59658,
+      "avg_home_goals": 1.89767,
+      "avg_away_goals": 0.624445,
+      "avg_total_goals": 2.522115
     },
     "final": {
-      "p_home": 0.6693041226817994,
-      "p_draw": 0.21618623532883338,
-      "p_away": 0.11450964198936732,
+      "p_home": 0.6974035710308965,
+      "p_draw": 0.20620301266767027,
+      "p_away": 0.09639341630143325,
       "pick": "HOME",
-      "confidence": 0.6693041226817994
+      "confidence": 0.6974035710308965
     },
     "top_scores": [
       {
         "score": "2-0",
-        "probability": 0.13366210242892929
+        "probability": 0.14442151721359234
       },
       {
         "score": "1-0",
-        "probability": 0.12890032085584702
+        "probability": 0.14276450086064713
       },
       {
         "score": "1-1",
-        "probability": 0.10742245364433323
-      },
-      {
-        "score": "2-1",
-        "probability": 0.09413273727484704
+        "probability": 0.10476668271613289
       },
       {
         "score": "3-0",
-        "probability": 0.08589251786859123
+        "probability": 0.09130714012755707
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09032222008587253
       },
       {
         "score": "0-0",
-        "probability": 0.08169429005084833
+        "probability": 0.0898165099636322
       },
       {
         "score": "3-1",
-        "probability": 0.06049057789359785
+        "probability": 0.05710411969856134
       },
       {
         "score": "4-0",
-        "probability": 0.04139650184162543
+        "probability": 0.043295109339264906
       },
       {
         "score": "0-1",
-        "probability": 0.040890694359000876
+        "probability": 0.04069109707160187
       },
       {
         "score": "1-2",
-        "probability": 0.03438783123660032
+        "probability": 0.029782641422652655
       }
     ],
     "odds": {
-      "odds_home": 1.55,
-      "odds_draw": 4.0,
-      "odds_away": 6.5,
-      "odds_over25": 1.95,
-      "odds_under25": 1.85
+      "odds_home": 1.478460670663132,
+      "odds_draw": 4.674906098988577,
+      "odds_away": 9.114707504790696,
+      "odds_over25": 2.29242556380104,
+      "odds_under25": 1.7737389510147006
     },
     "value": {
       "has_value_data": true,
       "bets": [
         {
           "market": "HOME",
-          "probability": 0.6693041226817994,
-          "odds": 1.55,
-          "implied_probability": 0.6451612903225806,
-          "edge": 0.02414283235921877,
-          "ev": 0.037421390156789025,
+          "probability": 0.6974035710308965,
+          "odds": 1.478460670663132,
+          "implied_probability": 0.6763791691201845,
+          "edge": 0.021024401910711976,
+          "ev": 0.031083751349202382,
           "is_value": true
         },
         {
           "market": "DRAW",
-          "probability": 0.21618623532883338,
-          "odds": 4.0,
-          "implied_probability": 0.25,
-          "edge": -0.03381376467116662,
-          "ev": -0.13525505868466647,
+          "probability": 0.20620301266767027,
+          "odds": 4.674906098988577,
+          "implied_probability": 0.21390803982487508,
+          "edge": -0.007705027157204808,
+          "ev": -0.03602027845008937,
           "is_value": false
         },
         {
           "market": "AWAY",
-          "probability": 0.11450964198936732,
-          "odds": 6.5,
-          "implied_probability": 0.15384615384615385,
-          "edge": -0.039336511856786535,
-          "ev": -0.25568732706911246,
+          "probability": 0.09639341630143325,
+          "odds": 9.114707504790696,
+          "implied_probability": 0.10971279105494054,
+          "edge": -0.013319374753507293,
+          "ev": -0.12140220502491261,
           "is_value": false
         },
         {
           "market": "OVER_2_5",
-          "probability": 0.48959253597995045,
-          "odds": 1.95,
-          "implied_probability": 0.5128205128205129,
-          "edge": -0.023227976840562437,
-          "ev": -0.04529455483909661,
-          "is_value": false
+          "probability": 0.4618371806479894,
+          "odds": 2.29242556380104,
+          "implied_probability": 0.4362191801516615,
+          "edge": 0.025618000496327897,
+          "ev": 0.05872735923124983,
+          "is_value": true
         },
         {
           "market": "UNDER_2_5",
-          "probability": 0.5104074640200496,
-          "odds": 1.85,
-          "implied_probability": 0.5405405405405405,
-          "edge": -0.03013307652049091,
-          "ev": -0.055746191562908276,
+          "probability": 0.5381628193520106,
+          "odds": 1.7737389510147006,
+          "implied_probability": 0.5637808198483386,
+          "edge": -0.02561800049632801,
+          "ev": -0.04543964532745093,
           "is_value": false
         }
       ],
       "best_value": {
-        "market": "HOME",
-        "probability": 0.6693041226817994,
-        "odds": 1.55,
-        "implied_probability": 0.6451612903225806,
-        "edge": 0.02414283235921877,
-        "ev": 0.037421390156789025,
+        "market": "OVER_2_5",
+        "probability": 0.4618371806479894,
+        "odds": 2.29242556380104,
+        "implied_probability": 0.4362191801516615,
+        "edge": 0.025618000496327897,
+        "ev": 0.05872735923124983,
         "is_value": true
       },
       "best_edge": {
-        "market": "HOME",
-        "probability": 0.6693041226817994,
-        "odds": 1.55,
-        "implied_probability": 0.6451612903225806,
-        "edge": 0.02414283235921877,
-        "ev": 0.037421390156789025,
+        "market": "OVER_2_5",
+        "probability": 0.4618371806479894,
+        "odds": 2.29242556380104,
+        "implied_probability": 0.4362191801516615,
+        "edge": 0.025618000496327897,
+        "ev": 0.05872735923124983,
         "is_value": true
       }
     },
