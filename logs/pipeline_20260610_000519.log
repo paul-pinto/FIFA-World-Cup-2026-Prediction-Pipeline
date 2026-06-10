@@ -1,0 +1,95 @@
+{
+  "date": "2026-06-11",
+  "evaluated_matches": 1,
+  "accuracy_1x2": 1.0,
+  "exact_score_hit_rate": 1.0,
+  "over25_accuracy": 1.0,
+  "btts_accuracy": 1.0,
+  "avg_log_loss_1x2": 0.40151672920259535,
+  "avg_brier_1x2": 0.16920870972944113,
+  "avg_actual_score_top10_prob": 0.1336621024289292,
+  "evaluated_utc": "2026-06-10T04:05:20.659774+00:00"
+}
+
+[OK] Evaluaci¾n generada:
+- csv: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\daily\evaluation_2026-06-11.csv
+- json: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\daily\evaluation_2026-06-11.json
+- md: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\reports\evaluation_report_2026-06-11.md
+[OK] worldcup_results.csv generado: D:\DESCARGAS\PYPAUL\worldcup_model\data\master\worldcup_results.csv
+[OK] filas: 2
+         date    home_team     away_team  ...         city  country neutral
+0  2026-06-11       Mexico  South Africa  ...  Mexico City   Mexico   False
+1  2026-06-12  South Korea       Czechia  ...  Guadalajara   Mexico    True
+
+[2 rows x 9 columns]
+[1/4] Construyendo matches.parquet...
+    matches: 49,379
+[2/4] Calculando Elo...
+    guardado: D:\DESCARGAS\PYPAUL\worldcup_model\data\processed\matches_with_elo.parquet
+[3/4] Calculando features...
+    guardado: D:\DESCARGAS\PYPAUL\worldcup_model\data\processed\training_dataset.parquet
+[4/4] Entrenando modelos ML...
+{
+  "rows_total": 48066,
+  "rows_train": 38452,
+  "rows_test": 9614,
+  "date_train_min": "1877-03-03 00:00:00",
+  "date_train_max": "2016-05-28 00:00:00",
+  "date_test_min": "2016-05-28 00:00:00",
+  "date_test_max": "2026-06-12 00:00:00",
+  "accuracy_1x2": 0.5939255252756397,
+  "log_loss_1x2": 0.8845543572293334,
+  "mae_home_goals": 1.0310202228892467,
+  "mae_away_goals": 0.8436716259118073,
+  "auc_over25": 0.6157893962167442,
+  "auc_btts": 0.5640274833187372
+}
+[OK] Reentrenamiento completo.
+[odds-api] status=200
+[odds-api] requests-used=60
+[odds-api] requests-remaining=440
+[odds-api] requests-last=6
+[OK] raw odds guardado: D:\DESCARGAS\PYPAUL\worldcup_model\data\raw\odds_api\2026-06-12\04-05-43.json
+[OK] odds snapshot actualizado: D:\DESCARGAS\PYPAUL\worldcup_model\data\processed\odds_snapshots.csv
+[OK] manual_odds actualizado: D:\DESCARGAS\PYPAUL\worldcup_model\data\master\manual_odds.csv
+[OK] filas API: 2
+     match_id  odds_home  ...  p_over25_consensus  p_under25_consensus
+0  WC2026-002   2.759245  ...            0.427290             0.572710
+1  WC2026-003   1.901916  ...            0.440102             0.559898
+
+[2 rows x 16 columns]
+[+] Prediciendo South Korea vs Czechia
+    odds: OK
+[+] Prediciendo Canada vs Bosnia and Herzegovina
+    odds: OK
+
+[OK] Outputs generados:
+- json: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\daily\predictions_2026-06-12.json
+- csv: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\daily\predictions_2026-06-12.csv
+- xlsx: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\daily\predictions_2026-06-12.xlsx
+- md: D:\DESCARGAS\PYPAUL\worldcup_model\outputs\reports\daily_report_2026-06-12.md
+[OK] Enviado Telegram para 2026-06-12
+
+================================================================================
+RUN: D:\DESCARGAS\PYPAUL\worldcup_model\.venv\Scripts\python.exe -m src.evaluator --date 2026-06-11
+================================================================================
+
+================================================================================
+RUN: D:\DESCARGAS\PYPAUL\worldcup_model\.venv\Scripts\python.exe -m src.sync_worldcup_results --print
+================================================================================
+
+================================================================================
+RUN: D:\DESCARGAS\PYPAUL\worldcup_model\.venv\Scripts\python.exe -m src.retrain
+================================================================================
+
+================================================================================
+RUN: D:\DESCARGAS\PYPAUL\worldcup_model\.venv\Scripts\python.exe -m src.odds_api --date 2026-06-12
+================================================================================
+
+================================================================================
+RUN: D:\DESCARGAS\PYPAUL\worldcup_model\.venv\Scripts\python.exe -m src.run_daily --date 2026-06-12
+================================================================================
+
+================================================================================
+RUN: D:\DESCARGAS\PYPAUL\worldcup_model\.venv\Scripts\python.exe -m src.telegram_notify send --date 2026-06-12
+================================================================================

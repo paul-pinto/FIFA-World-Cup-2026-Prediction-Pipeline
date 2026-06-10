@@ -97,118 +97,87 @@
         "probability": 0.03438783123660032
       }
     ],
+    "odds": {
+      "odds_home": 1.55,
+      "odds_draw": 4.0,
+      "odds_away": 6.5,
+      "odds_over25": 1.95,
+      "odds_under25": 1.85
+    },
+    "value": {
+      "has_value_data": true,
+      "bets": [
+        {
+          "market": "HOME",
+          "probability": 0.6693041226817994,
+          "odds": 1.55,
+          "implied_probability": 0.6451612903225806,
+          "edge": 0.02414283235921877,
+          "ev": 0.037421390156789025,
+          "is_value": true
+        },
+        {
+          "market": "DRAW",
+          "probability": 0.21618623532883338,
+          "odds": 4.0,
+          "implied_probability": 0.25,
+          "edge": -0.03381376467116662,
+          "ev": -0.13525505868466647,
+          "is_value": false
+        },
+        {
+          "market": "AWAY",
+          "probability": 0.11450964198936732,
+          "odds": 6.5,
+          "implied_probability": 0.15384615384615385,
+          "edge": -0.039336511856786535,
+          "ev": -0.25568732706911246,
+          "is_value": false
+        },
+        {
+          "market": "OVER_2_5",
+          "probability": 0.48959253597995045,
+          "odds": 1.95,
+          "implied_probability": 0.5128205128205129,
+          "edge": -0.023227976840562437,
+          "ev": -0.04529455483909661,
+          "is_value": false
+        },
+        {
+          "market": "UNDER_2_5",
+          "probability": 0.5104074640200496,
+          "odds": 1.85,
+          "implied_probability": 0.5405405405405405,
+          "edge": -0.03013307652049091,
+          "ev": -0.055746191562908276,
+          "is_value": false
+        }
+      ],
+      "best_value": {
+        "market": "HOME",
+        "probability": 0.6693041226817994,
+        "odds": 1.55,
+        "implied_probability": 0.6451612903225806,
+        "edge": 0.02414283235921877,
+        "ev": 0.037421390156789025,
+        "is_value": true
+      },
+      "best_edge": {
+        "market": "HOME",
+        "probability": 0.6693041226817994,
+        "odds": 1.55,
+        "implied_probability": 0.6451612903225806,
+        "edge": 0.02414283235921877,
+        "ev": 0.037421390156789025,
+        "is_value": true
+      }
+    },
     "match_id": "WC2026-001",
     "date_utc": "2026-06-11T19:00:00+00:00",
     "stage": "Group Stage",
     "group": "A",
     "venue": "Mexico City Stadium",
     "city": "Mexico City",
-    "country": "Mexico"
-  },
-  {
-    "home_team": "South Korea",
-    "away_team": "Czechia",
-    "neutral": 1,
-    "lambda_home": 1.5607676148544094,
-    "lambda_away": 1.0658600166846481,
-    "market": {
-      "p_home": 0.4012133468149647,
-      "p_draw": 0.2946410515672397,
-      "p_away": 0.3041456016177958,
-      "overround_1x2": 0.06061256005490723,
-      "p_over25": 0.4545454545454546,
-      "p_under25": 0.5454545454545455,
-      "overround_ou25": 0.04761904761904745,
-      "lambda_total": 2.49,
-      "lambda_home": 1.3563646788990826,
-      "lambda_away": 1.1336353211009176
-    },
-    "ml": {
-      "p_home": 0.6021160820980298,
-      "p_draw": 0.24954903266593548,
-      "p_away": 0.14833488523603475,
-      "p_over25": 0.5052140846212879,
-      "p_btts_yes": 0.5599628463344619,
-      "lambda_home": 1.810593425466475,
-      "lambda_away": 0.9830235335092078
-    },
-    "dixon_coles": {
-      "p_home": 0.47573935967615033,
-      "p_draw": 0.2770103513311549,
-      "p_away": 0.24725028899269438,
-      "p_over25": 0.48823399857566896,
-      "p_under25": 0.511766001424331,
-      "p_btts_yes": 0.5299466896304029,
-      "p_btts_no": 0.4700533103695971
-    },
-    "monte_carlo": {
-      "n_sim": 200000,
-      "home_win": 0.47675,
-      "draw": 0.275165,
-      "away_win": 0.248085,
-      "over25": 0.487925,
-      "under25": 0.512075,
-      "btts_yes": 0.52871,
-      "btts_no": 0.47129,
-      "avg_home_goals": 1.561345,
-      "avg_away_goals": 1.065945,
-      "avg_total_goals": 2.62729
-    },
-    "final": {
-      "p_home": 0.49016080737933393,
-      "p_draw": 0.274451169892762,
-      "p_away": 0.2353880227279041,
-      "pick": "HOME",
-      "confidence": 0.49016080737933393
-    },
-    "top_scores": [
-      {
-        "score": "1-1",
-        "probability": 0.1323431825116791
-      },
-      {
-        "score": "1-0",
-        "probability": 0.10084664879135531
-      },
-      {
-        "score": "2-1",
-        "probability": 0.09388952423227051
-      },
-      {
-        "score": "2-0",
-        "probability": 0.08808804417329902
-      },
-      {
-        "score": "0-0",
-        "probability": 0.08435320594491134
-      },
-      {
-        "score": "0-1",
-        "probability": 0.06505393774751252
-      },
-      {
-        "score": "1-2",
-        "probability": 0.06411786669090805
-      },
-      {
-        "score": "2-2",
-        "probability": 0.05003654493236076
-      },
-      {
-        "score": "3-1",
-        "probability": 0.04884657626527205
-      },
-      {
-        "score": "3-0",
-        "probability": 0.0458283222005166
-      }
-    ],
-    "match_id": "WC2026-002",
-    "date_utc": "2026-06-11T22:00:00+00:00",
-    "stage": "Group Stage",
-    "group": "B",
-    "venue": "Estadio Akron",
-    "city": "Guadalajara",
     "country": "Mexico"
   }
 ]

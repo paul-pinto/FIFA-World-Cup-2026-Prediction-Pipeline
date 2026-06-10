@@ -1,5 +1,4 @@
 match_id,date_utc,stage,group,home_team,away_team,venue,city,country,neutral
 WC2026-001,2026-06-11T19:00:00Z,Group Stage,A,Mexico,South Africa,Mexico City Stadium,Mexico City,Mexico,0
-WC2026-002,2026-06-11T22:00:00Z,Group Stage,B,South Korea,Czechia,Estadio Akron,Guadalajara,Mexico,1
-WC2026-003,2026-06-12T19:00:00Z,Group Stage,C,Canada,Qatar,BMO Field,Toronto,Canada,0
-WC2026-004,2026-06-12T22:00:00Z,Group Stage,D,United States,Paraguay,SoFi Stadium,Los Angeles,United States,0
+WC2026-002,2026-06-12T02:00:00Z,Group Stage,B,South Korea,Czechia,Estadio Akron,Guadalajara,Mexico,1
+WC2026-003,2026-06-12T19:00:00Z,Group Stage,C,Canada,Bosnia and Herzegovina,BMO Field,Toronto,Canada,0

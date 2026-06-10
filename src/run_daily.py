@@ -7,6 +7,7 @@ from src.config import MASTER_DIR
 from src.predictor import predict_match
 from src.exporter import export_daily
 from src.market import get_manual_odds_for_match, market_from_odds
+from src.value import evaluate_value_bets
 
 
 def load_fixtures() -> pd.DataFrame:
@@ -47,6 +48,9 @@ def predict_fixture(row) -> dict:
         market=market,
     )
 
+    pred["odds"] = odds
+    pred["value"] = evaluate_value_bets(pred, odds)
+    
     pred["match_id"] = match_id
     pred["date_utc"] = row["date_utc"].isoformat()
     pred["stage"] = row.get("stage", "")
@@ -54,7 +58,7 @@ def predict_fixture(row) -> dict:
     pred["venue"] = row.get("venue", "")
     pred["city"] = row.get("city", "")
     pred["country"] = row.get("country", "")
-
+    
     return pred
 
     pred["match_id"] = row.get("match_id", "")

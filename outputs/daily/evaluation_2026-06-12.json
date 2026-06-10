@@ -1,0 +1,44 @@
+{
+  "metrics": {
+    "date": "2026-06-12",
+    "evaluated_matches": 1,
+    "accuracy_1x2": 0.0,
+    "exact_score_hit_rate": 1.0,
+    "over25_accuracy": 1.0,
+    "btts_accuracy": 1.0,
+    "avg_log_loss_1x2": 1.2724994960265714,
+    "avg_brier_1x2": 0.8007669190426302,
+    "avg_actual_score_top10_prob": 0.1355264888533816,
+    "evaluated_utc": "2026-06-10T03:35:18.971096+00:00"
+  },
+  "rows": [
+    {
+      "match_id": "WC2026-002",
+      "date_utc": "2026-06-12T02:00:00+00:00",
+      "home_team": "South Korea",
+      "away_team": "Czechia",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_score": "1-1",
+      "actual_1x2": "DRAW",
+      "pick": "HOME",
+      "correct_1x2": 0,
+      "top_score_1": "1-1",
+      "exact_score_hit": 1,
+      "actual_score_top10_prob": 0.1355264888533816,
+      "actual_over25": 0,
+      "pred_over25_prob": 0.4744243279235636,
+      "over25_pick": 0,
+      "over25_hit": 1,
+      "actual_btts": 1,
+      "pred_btts_prob": 0.5245335912876377,
+      "btts_pick": 1,
+      "btts_hit": 1,
+      "final_p_home": 0.4682142299968051,
+      "final_p_draw": 0.2801305607702,
+      "final_p_away": 0.2516552092329949,
+      "log_loss_1x2": 1.2724994960265714,
+      "brier_1x2": 0.8007669190426302
+    }
+  ]
+}

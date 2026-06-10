@@ -57,6 +57,37 @@ def flatten_prediction(pred: dict) -> dict:
         "final_p_away": pred["final"]["p_away"],
         "pick": pred["final"]["pick"],
         "confidence": pred["final"]["confidence"],
+        "has_value_data": pred.get("value", {}).get("has_value_data", False),
+        "best_value_market": (
+            pred.get("value", {}).get("best_value", {}) or {}
+        ).get("market"),
+        "best_value_odds": (
+            pred.get("value", {}).get("best_value", {}) or {}
+        ).get("odds"),
+        "best_value_probability": (
+            pred.get("value", {}).get("best_value", {}) or {}
+        ).get("probability"),
+        "best_value_edge": (
+            pred.get("value", {}).get("best_value", {}) or {}
+        ).get("edge"),
+        "best_value_ev": (
+            pred.get("value", {}).get("best_value", {}) or {}
+        ).get("ev"),
+        "best_edge_market": (
+            pred.get("value", {}).get("best_edge", {}) or {}
+        ).get("market"),
+        "best_edge_odds": (
+            pred.get("value", {}).get("best_edge", {}) or {}
+        ).get("odds"),
+        "best_edge_probability": (
+            pred.get("value", {}).get("best_edge", {}) or {}
+        ).get("probability"),
+        "best_edge": (
+            pred.get("value", {}).get("best_edge", {}) or {}
+        ).get("edge"),
+        "best_edge_ev": (
+            pred.get("value", {}).get("best_edge", {}) or {}
+        ).get("ev"),
     }
 
     for i, score in enumerate(pred["top_scores"][:10], start=1):
@@ -149,6 +180,31 @@ def build_markdown_report(predictions: list[dict], run_date: str) -> str:
         lines.append(f"- Under 2.5: **{pct(pred['dixon_coles']['p_under25'])}**")
         lines.append(f"- BTTS Sí: **{pct(pred['dixon_coles']['p_btts_yes'])}**")
         lines.append(f"- BTTS No: **{pct(pred['dixon_coles']['p_btts_no'])}**")
+        lines.append("")
+        
+        value = pred.get("value", {})
+        best_value = value.get("best_value")
+        best_edge = value.get("best_edge")
+
+        lines.append("### Value")
+        lines.append("")
+
+        if best_value:
+            lines.append(f"- Mejor value: **{best_value['market']}**")
+            lines.append(f"- Cuota: `{best_value['odds']:.2f}`")
+            lines.append(f"- Probabilidad modelo: **{pct(best_value['probability'])}**")
+            lines.append(f"- Edge: **{best_value['edge']:+.3f}**")
+            lines.append(f"- EV: **{best_value['ev']:+.3f}**")
+        elif best_edge:
+            lines.append("- No hay value claro según umbrales.")
+            lines.append(f"- Mejor edge: **{best_edge['market']}**")
+            lines.append(f"- Cuota: `{best_edge['odds']:.2f}`")
+            lines.append(f"- Probabilidad modelo: **{pct(best_edge['probability'])}**")
+            lines.append(f"- Edge: **{best_edge['edge']:+.3f}**")
+            lines.append(f"- EV: **{best_edge['ev']:+.3f}**")
+        else:
+            lines.append("- Sin datos de cuotas.")
+
         lines.append("")
 
         lines.append("### Monte Carlo")

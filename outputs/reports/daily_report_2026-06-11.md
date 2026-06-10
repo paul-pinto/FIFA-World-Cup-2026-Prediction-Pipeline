@@ -37,6 +37,14 @@ Fecha: `2026-06-11`
 - BTTS Sí: **44.2%**
 - BTTS No: **55.8%**
 
+### Value
+
+- Mejor value: **HOME**
+- Cuota: `1.55`
+- Probabilidad modelo: **66.9%**
+- Edge: **+0.024**
+- EV: **+0.037**
+
 ### Monte Carlo
 
 - Simulaciones: `200,000`
@@ -44,48 +52,5 @@ Fecha: `2026-06-11`
 - Empate: **22.6%**
 - South Africa: **11.8%**
 - Goles promedio: `2.632`
-
----
-
-## South Korea vs Czechia
-
-- Match ID: `WC2026-002`
-- Fecha UTC: `2026-06-11T22:00:00+00:00`
-- Sede: Estadio Akron - Guadalajara, Mexico
-
-### Final 1X2
-
-- South Korea: **49.0%**
-- Empate: **27.4%**
-- Czechia: **23.5%**
-- Pick: **HOME** (49.0%)
-
-### Goles esperados
-
-- South Korea: `1.561`
-- Czechia: `1.066`
-
-### Top scores
-
-1. `1-1` → **13.2%**
-2. `1-0` → **10.1%**
-3. `2-1` → **9.4%**
-4. `2-0` → **8.8%**
-5. `0-0` → **8.4%**
-
-### Mercados derivados
-
-- Over 2.5: **48.8%**
-- Under 2.5: **51.2%**
-- BTTS Sí: **53.0%**
-- BTTS No: **47.0%**
-
-### Monte Carlo
-
-- Simulaciones: `200,000`
-- South Korea: **47.7%**
-- Empate: **27.5%**
-- Czechia: **24.8%**
-- Goles promedio: `2.627`
 
 ---
