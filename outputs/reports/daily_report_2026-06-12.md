@@ -64,34 +64,34 @@ Fecha: `2026-06-12`
 ### Final 1X2
 
 - Canada: **61.1%**
-- Empate: **24.0%**
-- Bosnia and Herzegovina: **14.9%**
+- Empate: **24.3%**
+- Bosnia and Herzegovina: **14.6%**
 - Pick: **HOME** (61.1%)
 
 ### Goles esperados
 
-- Canada: `1.711`
-- Bosnia and Herzegovina: `0.764`
+- Canada: `1.686`
+- Bosnia and Herzegovina: `0.745`
 
 ### Top scores
 
-1. `1-0` → **13.3%**
-2. `2-0` → **12.3%**
-3. `1-1` → **12.1%**
-4. `0-0` → **9.5%**
-5. `2-1` → **9.4%**
+1. `1-0` → **13.7%**
+2. `2-0` → **12.5%**
+3. `1-1` → **12.2%**
+4. `0-0` → **9.9%**
+5. `2-1` → **9.3%**
 
 ### Mercados derivados
 
-- Over 2.5: **45.0%**
-- Under 2.5: **55.0%**
-- BTTS Sí: **44.9%**
-- BTTS No: **55.1%**
+- Over 2.5: **43.9%**
+- Under 2.5: **56.1%**
+- BTTS Sí: **43.9%**
+- BTTS No: **56.1%**
 
 ### Value
 
 - Mejor value: **HOME**
-- Cuota: `1.90`
+- Cuota: `1.91`
 - Probabilidad modelo: **61.1%**
 - Edge: **+0.086**
 - EV: **+0.164**
@@ -99,9 +99,9 @@ Fecha: `2026-06-12`
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Canada: **59.0%**
-- Empate: **25.7%**
-- Bosnia and Herzegovina: **15.4%**
-- Goles promedio: `2.476`
+- Canada: **58.9%**
+- Empate: **25.9%**
+- Bosnia and Herzegovina: **15.2%**
+- Goles promedio: `2.432`
 
 ---
