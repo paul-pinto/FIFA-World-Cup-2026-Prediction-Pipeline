@@ -15,6 +15,12 @@ PROCESSED_DIR = DATA_DIR / "processed"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
+SPORTMONKS_API_TOKEN = os.getenv("SPORTMONKS_API_TOKEN", "")
+SPORTMONKS_BASE_URL = os.getenv(
+    "SPORTMONKS_BASE_URL",
+    "https://api.sportmonks.com/v3/football",
+)
+
 MODELS_DIR = ROOT_DIR / "models"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
 DAILY_OUTPUTS_DIR = OUTPUTS_DIR / "daily"

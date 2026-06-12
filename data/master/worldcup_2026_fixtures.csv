@@ -1,4 +1,73 @@
 match_id,date_utc,stage,group,home_team,away_team,venue,city,country,neutral
-WC2026-001,2026-06-11T19:00:00Z,Group Stage,A,Mexico,South Africa,Mexico City Stadium,Mexico City,Mexico,0
-WC2026-002,2026-06-12T02:00:00Z,Group Stage,B,South Korea,Czechia,Estadio Akron,Guadalajara,Mexico,1
-WC2026-003,2026-06-12T19:00:00Z,Group Stage,C,Canada,Bosnia and Herzegovina,BMO Field,Toronto,Canada,0
+WC2026-001,2026-06-11T19:00:00Z,Group Stage,A,Mexico,South Africa,TBD,TBD,TBD,0
+WC2026-002,2026-06-12T02:00:00Z,Group Stage,A,South Korea,Czechia,TBD,TBD,TBD,1
+WC2026-003,2026-06-12T19:00:00Z,Group Stage,B,Canada,Bosnia and Herzegovina,TBD,TBD,TBD,0
+WC2026-004,2026-06-13T01:00:00Z,Group Stage,D,United States,Paraguay,TBD,TBD,TBD,0
+WC2026-005,2026-06-13T19:00:00Z,Group Stage,B,Qatar,Switzerland,TBD,TBD,TBD,1
+WC2026-006,2026-06-13T22:00:00Z,Group Stage,C,Brazil,Morocco,TBD,TBD,TBD,1
+WC2026-007,2026-06-14T01:00:00Z,Group Stage,C,Haiti,Scotland,TBD,TBD,TBD,1
+WC2026-008,2026-06-14T04:00:00Z,Group Stage,D,Australia,Turkey,TBD,TBD,TBD,1
+WC2026-009,2026-06-14T17:00:00Z,Group Stage,E,Germany,Curacao,TBD,TBD,TBD,1
+WC2026-010,2026-06-14T20:00:00Z,Group Stage,F,Netherlands,Japan,TBD,TBD,TBD,1
+WC2026-011,2026-06-14T23:00:00Z,Group Stage,E,Ivory Coast,Ecuador,TBD,TBD,TBD,1
+WC2026-012,2026-06-15T02:00:00Z,Group Stage,F,Sweden,Tunisia,TBD,TBD,TBD,1
+WC2026-013,2026-06-15T16:00:00Z,Group Stage,H,Spain,Cape Verde,TBD,TBD,TBD,1
+WC2026-014,2026-06-15T19:00:00Z,Group Stage,G,Belgium,Egypt,TBD,TBD,TBD,1
+WC2026-015,2026-06-15T22:00:00Z,Group Stage,H,Saudi Arabia,Uruguay,TBD,TBD,TBD,1
+WC2026-016,2026-06-16T01:00:00Z,Group Stage,G,Iran,New Zealand,TBD,TBD,TBD,1
+WC2026-017,2026-06-16T19:00:00Z,Group Stage,I,France,Senegal,TBD,TBD,TBD,1
+WC2026-018,2026-06-16T22:00:00Z,Group Stage,I,Iraq,Norway,TBD,TBD,TBD,1
+WC2026-019,2026-06-17T01:00:00Z,Group Stage,J,Argentina,Algeria,TBD,TBD,TBD,1
+WC2026-020,2026-06-17T04:00:00Z,Group Stage,J,Austria,Jordan,TBD,TBD,TBD,1
+WC2026-021,2026-06-17T17:00:00Z,Group Stage,K,Portugal,DR Congo,TBD,TBD,TBD,1
+WC2026-022,2026-06-17T20:00:00Z,Group Stage,L,England,Croatia,TBD,TBD,TBD,1
+WC2026-023,2026-06-17T23:00:00Z,Group Stage,L,Ghana,Panama,TBD,TBD,TBD,1
+WC2026-024,2026-06-18T02:00:00Z,Group Stage,K,Uzbekistan,Colombia,TBD,TBD,TBD,1
+WC2026-025,2026-06-18T16:00:00Z,Group Stage,A,Czechia,South Africa,TBD,TBD,TBD,1
+WC2026-026,2026-06-18T19:00:00Z,Group Stage,B,Switzerland,Bosnia and Herzegovina,TBD,TBD,TBD,1
+WC2026-027,2026-06-18T22:00:00Z,Group Stage,B,Canada,Qatar,TBD,TBD,TBD,0
+WC2026-028,2026-06-19T01:00:00Z,Group Stage,A,Mexico,South Korea,TBD,TBD,TBD,0
+WC2026-029,2026-06-19T19:00:00Z,Group Stage,D,United States,Australia,TBD,TBD,TBD,0
+WC2026-030,2026-06-19T22:00:00Z,Group Stage,C,Scotland,Morocco,TBD,TBD,TBD,1
+WC2026-031,2026-06-20T00:30:00Z,Group Stage,C,Brazil,Haiti,TBD,TBD,TBD,1
+WC2026-032,2026-06-20T03:00:00Z,Group Stage,D,Turkey,Paraguay,TBD,TBD,TBD,1
+WC2026-033,2026-06-20T17:00:00Z,Group Stage,F,Netherlands,Sweden,TBD,TBD,TBD,1
+WC2026-034,2026-06-20T20:00:00Z,Group Stage,E,Germany,Ivory Coast,TBD,TBD,TBD,1
+WC2026-035,2026-06-21T00:00:00Z,Group Stage,E,Ecuador,Curacao,TBD,TBD,TBD,1
+WC2026-036,2026-06-21T04:00:00Z,Group Stage,F,Tunisia,Japan,TBD,TBD,TBD,1
+WC2026-037,2026-06-21T16:00:00Z,Group Stage,H,Spain,Saudi Arabia,TBD,TBD,TBD,1
+WC2026-038,2026-06-21T19:00:00Z,Group Stage,G,Belgium,Iran,TBD,TBD,TBD,1
+WC2026-039,2026-06-21T22:00:00Z,Group Stage,H,Uruguay,Cape Verde,TBD,TBD,TBD,1
+WC2026-040,2026-06-22T01:00:00Z,Group Stage,G,New Zealand,Egypt,TBD,TBD,TBD,1
+WC2026-041,2026-06-22T17:00:00Z,Group Stage,J,Argentina,Austria,TBD,TBD,TBD,1
+WC2026-042,2026-06-22T21:00:00Z,Group Stage,I,France,Iraq,TBD,TBD,TBD,1
+WC2026-043,2026-06-23T00:00:00Z,Group Stage,I,Norway,Senegal,TBD,TBD,TBD,1
+WC2026-044,2026-06-23T03:00:00Z,Group Stage,J,Jordan,Algeria,TBD,TBD,TBD,1
+WC2026-045,2026-06-23T17:00:00Z,Group Stage,K,Portugal,Uzbekistan,TBD,TBD,TBD,1
+WC2026-046,2026-06-23T20:00:00Z,Group Stage,L,England,Ghana,TBD,TBD,TBD,1
+WC2026-047,2026-06-23T23:00:00Z,Group Stage,L,Panama,Croatia,TBD,TBD,TBD,1
+WC2026-048,2026-06-24T02:00:00Z,Group Stage,K,Colombia,DR Congo,TBD,TBD,TBD,1
+WC2026-049,2026-06-24T19:00:00Z,Group Stage,B,Switzerland,Canada,TBD,TBD,TBD,1
+WC2026-050,2026-06-24T19:00:00Z,Group Stage,B,Bosnia and Herzegovina,Qatar,TBD,TBD,TBD,1
+WC2026-051,2026-06-24T22:00:00Z,Group Stage,C,Morocco,Haiti,TBD,TBD,TBD,1
+WC2026-052,2026-06-24T22:00:00Z,Group Stage,C,Scotland,Brazil,TBD,TBD,TBD,1
+WC2026-053,2026-06-25T01:00:00Z,Group Stage,A,South Africa,South Korea,TBD,TBD,TBD,1
+WC2026-054,2026-06-25T01:00:00Z,Group Stage,A,Czechia,Mexico,TBD,TBD,TBD,1
+WC2026-055,2026-06-25T20:00:00Z,Group Stage,E,Curacao,Ivory Coast,TBD,TBD,TBD,1
+WC2026-056,2026-06-25T20:00:00Z,Group Stage,E,Ecuador,Germany,TBD,TBD,TBD,1
+WC2026-057,2026-06-25T23:00:00Z,Group Stage,F,Tunisia,Netherlands,TBD,TBD,TBD,1
+WC2026-058,2026-06-25T23:00:00Z,Group Stage,F,Japan,Sweden,TBD,TBD,TBD,1
+WC2026-059,2026-06-26T02:00:00Z,Group Stage,D,Turkey,United States,TBD,TBD,TBD,1
+WC2026-060,2026-06-26T02:00:00Z,Group Stage,D,Paraguay,Australia,TBD,TBD,TBD,1
+WC2026-061,2026-06-26T19:00:00Z,Group Stage,I,Norway,France,TBD,TBD,TBD,1
+WC2026-062,2026-06-26T19:00:00Z,Group Stage,I,Senegal,Iraq,TBD,TBD,TBD,1
+WC2026-063,2026-06-27T00:00:00Z,Group Stage,H,Cape Verde,Saudi Arabia,TBD,TBD,TBD,1
+WC2026-064,2026-06-27T00:00:00Z,Group Stage,H,Uruguay,Spain,TBD,TBD,TBD,1
+WC2026-065,2026-06-27T03:00:00Z,Group Stage,G,New Zealand,Belgium,TBD,TBD,TBD,1
+WC2026-066,2026-06-27T03:00:00Z,Group Stage,G,Egypt,Iran,TBD,TBD,TBD,1
+WC2026-067,2026-06-27T21:00:00Z,Group Stage,L,Panama,England,TBD,TBD,TBD,1
+WC2026-068,2026-06-27T21:00:00Z,Group Stage,L,Croatia,Ghana,TBD,TBD,TBD,1
+WC2026-069,2026-06-27T23:30:00Z,Group Stage,K,Colombia,Portugal,TBD,TBD,TBD,1
+WC2026-070,2026-06-27T23:30:00Z,Group Stage,K,DR Congo,Uzbekistan,TBD,TBD,TBD,1
+WC2026-071,2026-06-28T02:00:00Z,Group Stage,J,Algeria,Austria,TBD,TBD,TBD,1
+WC2026-072,2026-06-28T02:00:00Z,Group Stage,J,Jordan,Argentina,TBD,TBD,TBD,1

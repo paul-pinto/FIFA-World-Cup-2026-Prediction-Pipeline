@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 216268,
+      "sport_id": 1,
+      "league_id": 271,
+      "season_id": 1273,
+      "stage_id": 1086,
+      "group_id": null,
+      "aggregate_id": null,
+      "round_id": 23332,
+      "state_id": 5,
+      "venue_id": 618,
+      "name": "Esbjerg vs OB",
+      "starting_at": "2006-03-25 16:00:00",
+      "result_info": "Esbjerg won after full-time.",
+      "leg": "1/1",
+      "details": null,
+      "length": 90,
+      "placeholder": false,
+      "has_odds": false,
+      "has_premium_odds": false,
+      "starting_at_timestamp": 1143302400
+    }
+  ],
+  "pagination": {
+    "count": 1,
+    "per_page": 1,
+    "has_more": true,
+    "current_page": 1,
+    "next_page": "https://api.sportmonks.com/v3/football/fixtures?per_page=1&page=2",
+    "next_cursor": "https://api.sportmonks.com/v3/football/fixtures?cursor=WzEsMSxbMjE2MjY4XSxbWyJzcG9ydHMuZml4dHVyZXMuaWQiLDBdXV0"
+  },
+  "subscription": [
+    {
+      "meta": [],
+      "plans": [
+        {
+          "plan": "Football Free Plan",
+          "sport": "Football",
+          "category": "Standard"
+        },
+        {
+          "plan": "Cricket Free Plan",
+          "sport": "Cricket",
+          "category": "Standard"
+        }
+      ],
+      "add_ons": [],
+      "widgets": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 3600,
+    "remaining": 2999,
+    "requested_entity": "Fixture"
+  },
+  "timezone": "UTC"
+}
