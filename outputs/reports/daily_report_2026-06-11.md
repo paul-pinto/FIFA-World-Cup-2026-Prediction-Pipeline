@@ -12,20 +12,20 @@ Fecha: `2026-06-11`
 
 ### Final 1X2
 
-- Mexico: **69.7%**
+- Mexico: **69.6%**
 - Empate: **20.6%**
-- South Africa: **9.6%**
-- Pick: **HOME** (69.7%)
+- South Africa: **9.8%**
+- Pick: **HOME** (69.6%)
 
 ### Goles esperados
 
-- Mexico: `1.897`
-- South Africa: `0.625`
+- Mexico: `1.893`
+- South Africa: `0.629`
 
 ### Top scores
 
 1. `2-0` → **14.4%**
-2. `1-0` → **14.3%**
+2. `1-0` → **14.2%**
 3. `1-1` → **10.5%**
 4. `3-0` → **9.1%**
 5. `2-1` → **9.0%**
@@ -34,23 +34,23 @@ Fecha: `2026-06-11`
 
 - Over 2.5: **46.2%**
 - Under 2.5: **53.8%**
-- BTTS Sí: **40.5%**
-- BTTS No: **59.5%**
+- BTTS Sí: **40.6%**
+- BTTS No: **59.4%**
 
 ### Value
 
 - Mejor value: **OVER_2_5**
-- Cuota: `2.29`
+- Cuota: `2.30`
 - Probabilidad modelo: **46.2%**
 - Edge: **+0.026**
-- EV: **+0.059**
+- EV: **+0.061**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Mexico: **67.0%**
-- Empate: **22.5%**
-- South Africa: **10.5%**
+- Mexico: **66.8%**
+- Empate: **22.6%**
+- South Africa: **10.6%**
 - Goles promedio: `2.522`
 
 ---
