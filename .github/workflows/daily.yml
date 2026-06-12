@@ -21,8 +21,8 @@ on:
         default: "true"
 
   schedule:
-    # 10:00 Bolivia time = 14:00 UTC
-    - cron: "0 14 * * *"
+    # 07:00 Bolivia time = 11:00 UTC
+    - cron: "0 11 * * *"
 
 permissions:
   contents: write
