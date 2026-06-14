@@ -106,6 +106,57 @@ Fecha: `2026-06-14`
 
 ---
 
+## Germany vs Curacao
+
+- Match ID: `WC2026-009`
+- Fecha UTC: `2026-06-14T17:00:00+00:00`
+- Sede: TBD - TBD, TBD
+
+### Final 1X2
+
+- Germany: **88.0%**
+- Empate: **8.6%**
+- Curacao: **3.3%**
+- Pick: **HOME** (88.0%)
+
+### Goles esperados
+
+- Germany: `3.183`
+- Curacao: `0.799`
+
+### Top scores
+
+1. `3-0` → **10.0%**
+2. `2-0` → **9.5%**
+3. `3-1` → **8.0%**
+4. `4-0` → **8.0%**
+5. `2-1` → **7.6%**
+
+### Mercados derivados
+
+- Over 2.5: **75.9%**
+- Under 2.5: **24.1%**
+- BTTS Sí: **53.2%**
+- BTTS No: **46.8%**
+
+### Value
+
+- Mejor value: **DRAW**
+- Cuota: `20.68`
+- Probabilidad modelo: **8.6%**
+- Edge: **+0.038**
+- EV: **+0.784**
+
+### Monte Carlo
+
+- Simulaciones: `200,000`
+- Germany: **82.8%**
+- Empate: **11.6%**
+- Curacao: **5.6%**
+- Goles promedio: `3.980`
+
+---
+
 ## Netherlands vs Japan
 
 - Match ID: `WC2026-010`
@@ -115,37 +166,37 @@ Fecha: `2026-06-14`
 ### Final 1X2
 
 - Netherlands: **44.6%**
-- Empate: **25.8%**
+- Empate: **25.9%**
 - Japan: **29.6%**
 - Pick: **HOME** (44.6%)
 
 ### Goles esperados
 
-- Netherlands: `1.431`
-- Japan: `1.193`
+- Netherlands: `1.428`
+- Japan: `1.190`
 
 ### Top scores
 
 1. `1-1` → **13.6%**
-2. `1-0` → **9.1%**
-3. `2-1` → **8.9%**
+2. `1-0` → **9.2%**
+3. `2-1` → **8.8%**
 4. `0-0` → **8.5%**
-5. `2-0` → **7.4%**
+5. `0-1` → **7.4%**
 
 ### Mercados derivados
 
-- Over 2.5: **48.8%**
-- Under 2.5: **51.2%**
-- BTTS Sí: **54.2%**
-- BTTS No: **45.8%**
+- Over 2.5: **48.6%**
+- Under 2.5: **51.4%**
+- BTTS Sí: **54.1%**
+- BTTS No: **45.9%**
 
 ### Value
 
 - Mejor value: **AWAY**
-- Cuota: `3.85`
+- Cuota: `3.86`
 - Probabilidad modelo: **29.6%**
-- Edge: **+0.036**
-- EV: **+0.140**
+- Edge: **+0.037**
+- EV: **+0.141**
 
 ### Monte Carlo
 
@@ -153,7 +204,7 @@ Fecha: `2026-06-14`
 - Netherlands: **41.2%**
 - Empate: **28.5%**
 - Japan: **30.3%**
-- Goles promedio: `2.626`
+- Goles promedio: `2.620`
 
 ---
 
@@ -172,38 +223,38 @@ Fecha: `2026-06-14`
 
 ### Goles esperados
 
-- Ivory Coast: `0.958`
-- Ecuador: `1.147`
+- Ivory Coast: `0.956`
+- Ecuador: `1.144`
 
 ### Top scores
 
 1. `1-1` → **14.7%**
-2. `0-0` → **13.5%**
-3. `0-1` → **12.6%**
-4. `1-0` → **10.3%**
+2. `0-0` → **13.6%**
+3. `0-1` → **12.7%**
+4. `1-0` → **10.4%**
 5. `0-2` → **8.0%**
 
 ### Mercados derivados
 
-- Over 2.5: **35.2%**
-- Under 2.5: **64.8%**
-- BTTS Sí: **43.4%**
-- BTTS No: **56.6%**
+- Over 2.5: **35.0%**
+- Under 2.5: **65.0%**
+- BTTS Sí: **43.3%**
+- BTTS No: **56.7%**
 
 ### Value
 
 - Mejor value: **OVER_2_5**
-- Cuota: `3.05`
-- Probabilidad modelo: **35.2%**
-- Edge: **+0.024**
-- EV: **+0.073**
+- Cuota: `3.07`
+- Probabilidad modelo: **35.0%**
+- Edge: **+0.025**
+- EV: **+0.077**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
 - Ivory Coast: **29.0%**
-- Empate: **32.4%**
-- Ecuador: **38.6%**
-- Goles promedio: `2.103`
+- Empate: **32.5%**
+- Ecuador: **38.5%**
+- Goles promedio: `2.097`
 
 ---
