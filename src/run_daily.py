@@ -1,13 +1,17 @@
 # src/run_daily.py
 import argparse
 import pandas as pd
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from src.config import MASTER_DIR
 from src.predictor import predict_match
 from src.exporter import export_daily
 from src.market import get_manual_odds_for_match, market_from_odds
 from src.value import evaluate_value_bets
+
+
+LOCAL_TZ = "America/La_Paz"
 
 
 def load_fixtures() -> pd.DataFrame:
@@ -19,14 +23,36 @@ def load_fixtures() -> pd.DataFrame:
         )
 
     df = pd.read_csv(path)
-    df["date_utc"] = pd.to_datetime(df["date_utc"], utc=True)
+    df["date_utc"] = pd.to_datetime(df["date_utc"], utc=True, errors="coerce")
+
+    if df["date_utc"].isna().any():
+        bad = df[df["date_utc"].isna()]
+        raise ValueError(
+            "Hay filas con date_utc inválido en worldcup_2026_fixtures.csv:\n"
+            + bad.to_string(index=False)
+        )
 
     return df
 
 
 def filter_fixtures_by_date(df: pd.DataFrame, target_date: str) -> pd.DataFrame:
-    date = pd.to_datetime(target_date).date()
-    return df[df["date_utc"].dt.date == date].copy()
+    """
+    Filtra por fecha calendario Bolivia, no por fecha UTC.
+
+    Ejemplo:
+    Sweden vs Tunisia = 2026-06-15T02:00:00Z
+    En Bolivia es 2026-06-14 22:00, por tanto debe entrar en --date 2026-06-14.
+    """
+    target_date = pd.to_datetime(target_date).strftime("%Y-%m-%d")
+
+    df = df.copy()
+    df["kickoff_local"] = df["date_utc"].dt.tz_convert(LOCAL_TZ)
+    df["date_local"] = df["kickoff_local"].dt.strftime("%Y-%m-%d")
+
+    today = df[df["date_local"] == target_date].copy()
+    today = today.sort_values("kickoff_local")
+
+    return today
 
 
 def predict_fixture(row) -> dict:
@@ -36,10 +62,10 @@ def predict_fixture(row) -> dict:
 
     if odds is not None:
         market = market_from_odds(odds)
-        print(f"    odds: OK")
+        print("    odds: OK")
     else:
         market = None
-        print(f"    odds: NO DISPONIBLES")
+        print("    odds: NO DISPONIBLES")
 
     pred = predict_match(
         home_team=row["home_team"],
@@ -50,19 +76,15 @@ def predict_fixture(row) -> dict:
 
     pred["odds"] = odds
     pred["value"] = evaluate_value_bets(pred, odds)
-    
+
     pred["match_id"] = match_id
     pred["date_utc"] = row["date_utc"].isoformat()
-    pred["stage"] = row.get("stage", "")
-    pred["group"] = row.get("group", "")
-    pred["venue"] = row.get("venue", "")
-    pred["city"] = row.get("city", "")
-    pred["country"] = row.get("country", "")
-    
-    return pred
-
-    pred["match_id"] = row.get("match_id", "")
-    pred["date_utc"] = row["date_utc"].isoformat()
+    pred["date_local"] = row.get("date_local", "")
+    pred["kickoff_local"] = (
+        row["kickoff_local"].isoformat()
+        if "kickoff_local" in row and pd.notna(row["kickoff_local"])
+        else ""
+    )
     pred["stage"] = row.get("stage", "")
     pred["group"] = row.get("group", "")
     pred["venue"] = row.get("venue", "")
@@ -77,8 +99,16 @@ def run_daily(target_date: str):
     today = filter_fixtures_by_date(fixtures, target_date)
 
     if today.empty:
-        print(f"[WARN] No hay partidos para {target_date}")
+        print(f"[WARN] No hay partidos para {target_date} en horario Bolivia ({LOCAL_TZ})")
         return []
+
+    print(f"[INFO] Fecha objetivo Bolivia: {target_date}")
+    print(f"[INFO] Partidos encontrados: {len(today)}")
+    print(
+        today[
+            ["match_id", "date_utc", "kickoff_local", "home_team", "away_team"]
+        ].to_string(index=False)
+    )
 
     predictions = []
 
@@ -108,8 +138,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--date",
-        default=datetime.now(timezone.utc).date().isoformat(),
-        help="Fecha objetivo YYYY-MM-DD",
+        default=datetime.now(ZoneInfo(LOCAL_TZ)).date().isoformat(),
+        help="Fecha objetivo local Bolivia YYYY-MM-DD",
     )
 
     args = parser.parse_args()
