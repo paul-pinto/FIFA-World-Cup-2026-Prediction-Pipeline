@@ -114,46 +114,46 @@ Fecha: `2026-06-14`
 
 ### Final 1X2
 
-- Netherlands: **45.4%**
-- Empate: **25.3%**
-- Japan: **29.3%**
-- Pick: **HOME** (45.4%)
+- Netherlands: **44.6%**
+- Empate: **25.8%**
+- Japan: **29.6%**
+- Pick: **HOME** (44.6%)
 
 ### Goles esperados
 
-- Netherlands: `1.471`
-- Japan: `1.203`
+- Netherlands: `1.431`
+- Japan: `1.193`
 
 ### Top scores
 
-1. `1-1` → **13.4%**
-2. `2-1` → **9.0%**
-3. `1-0` → **8.9%**
-4. `0-0` → **8.1%**
-5. `2-0` → **7.5%**
+1. `1-1` → **13.6%**
+2. `1-0` → **9.1%**
+3. `2-1` → **8.9%**
+4. `0-0` → **8.5%**
+5. `2-0` → **7.4%**
 
 ### Mercados derivados
 
-- Over 2.5: **50.0%**
-- Under 2.5: **50.0%**
-- BTTS Sí: **55.1%**
-- BTTS No: **44.9%**
+- Over 2.5: **48.8%**
+- Under 2.5: **51.2%**
+- BTTS Sí: **54.2%**
+- BTTS No: **45.8%**
 
 ### Value
 
 - Mejor value: **AWAY**
-- Cuota: `3.92`
-- Probabilidad modelo: **29.3%**
-- Edge: **+0.038**
-- EV: **+0.149**
+- Cuota: `3.85`
+- Probabilidad modelo: **29.6%**
+- Edge: **+0.036**
+- EV: **+0.140**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Netherlands: **42.1%**
-- Empate: **28.0%**
-- Japan: **29.9%**
-- Goles promedio: `2.676`
+- Netherlands: **41.2%**
+- Empate: **28.5%**
+- Japan: **30.3%**
+- Goles promedio: `2.626`
 
 ---
 
@@ -165,45 +165,45 @@ Fecha: `2026-06-14`
 
 ### Final 1X2
 
-- Ivory Coast: **29.0%**
-- Empate: **32.7%**
-- Ecuador: **38.3%**
-- Pick: **AWAY** (38.3%)
+- Ivory Coast: **30.5%**
+- Empate: **32.6%**
+- Ecuador: **36.9%**
+- Pick: **AWAY** (36.9%)
 
 ### Goles esperados
 
-- Ivory Coast: `0.929`
-- Ecuador: `1.176`
+- Ivory Coast: `0.958`
+- Ecuador: `1.147`
 
 ### Top scores
 
-1. `1-1` → **14.6%**
+1. `1-1` → **14.7%**
 2. `0-0` → **13.5%**
-3. `0-1` → **13.0%**
-4. `1-0` → **10.0%**
-5. `0-2` → **8.4%**
+3. `0-1` → **12.6%**
+4. `1-0` → **10.3%**
+5. `0-2` → **8.0%**
 
 ### Mercados derivados
 
 - Over 2.5: **35.2%**
 - Under 2.5: **64.8%**
-- BTTS Sí: **43.2%**
-- BTTS No: **56.8%**
+- BTTS Sí: **43.4%**
+- BTTS No: **56.6%**
 
 ### Value
 
-- Mejor value: **HOME**
-- Cuota: `3.79`
-- Probabilidad modelo: **29.0%**
-- Edge: **+0.026**
-- EV: **+0.100**
+- Mejor value: **OVER_2_5**
+- Cuota: `3.05`
+- Probabilidad modelo: **35.2%**
+- Edge: **+0.024**
+- EV: **+0.073**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Ivory Coast: **27.6%**
-- Empate: **32.3%**
-- Ecuador: **40.1%**
-- Goles promedio: `2.102`
+- Ivory Coast: **29.0%**
+- Empate: **32.4%**
+- Ecuador: **38.6%**
+- Goles promedio: `2.103`
 
 ---
