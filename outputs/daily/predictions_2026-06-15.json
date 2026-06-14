@@ -1,0 +1,718 @@
+[
+  {
+    "home_team": "Sweden",
+    "away_team": "Tunisia",
+    "neutral": 1,
+    "lambda_home": 1.3849981259995547,
+    "lambda_away": 1.1322664181447313,
+    "market": {
+      "p_home": 0.5057950242167033,
+      "p_draw": 0.2799777015673632,
+      "p_away": 0.21422727421593354,
+      "overround_1x2": 0.0,
+      "p_over25": 0.44728320080787987,
+      "p_under25": 0.5527167991921201,
+      "overround_ou25": 0.0,
+      "lambda_total": 2.47,
+      "lambda_home": 1.5600677261282285,
+      "lambda_away": 0.9099322738717717
+    },
+    "ml": {
+      "p_home": 0.4388481049862546,
+      "p_draw": 0.25139644174899206,
+      "p_away": 0.30975545326475323,
+      "p_over25": 0.5170265885414118,
+      "p_btts_yes": 0.4650808077513037,
+      "lambda_home": 1.1710241702867308,
+      "lambda_away": 1.4040081500339043
+    },
+    "dixon_coles": {
+      "p_home": 0.4140574945278053,
+      "p_draw": 0.2916534112862319,
+      "p_away": 0.29428909418596283,
+      "p_over25": 0.4606076461532106,
+      "p_under25": 0.5393923538467894,
+      "p_btts_yes": 0.5207058597774742,
+      "p_btts_no": 0.4792941402225258
+    },
+    "monte_carlo": {
+      "n_sim": 200000,
+      "home_win": 0.41313,
+      "draw": 0.29175,
+      "away_win": 0.29512,
+      "over25": 0.46075,
+      "under25": 0.53925,
+      "btts_yes": 0.520435,
+      "btts_no": 0.479565,
+      "avg_home_goals": 1.384855,
+      "avg_away_goals": 1.13347,
+      "avg_total_goals": 2.518325
+    },
+    "final": {
+      "p_home": 0.4594292200638218,
+      "p_draw": 0.2728931880606505,
+      "p_away": 0.2676775918755278,
+      "pick": "HOME",
+      "confidence": 0.4594292200638218
+    },
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.13917349143012975
+      },
+      {
+        "score": "1-0",
+        "probability": 0.09908954801397545
+      },
+      {
+        "score": "0-0",
+        "probability": 0.09333216070581046
+      },
+      {
+        "score": "2-1",
+        "probability": 0.08761592037252035
+      },
+      {
+        "score": "0-1",
+        "probability": 0.07869914747531107
+      },
+      {
+        "score": "2-0",
+        "probability": 0.07738101119000149
+      },
+      {
+        "score": "1-2",
+        "probability": 0.07162794120104066
+      },
+      {
+        "score": "0-2",
+        "probability": 0.051716995031561276
+      },
+      {
+        "score": "2-2",
+        "probability": 0.049602282166323806
+      },
+      {
+        "score": "3-1",
+        "probability": 0.04044929517455563
+      }
+    ],
+    "odds": {
+      "odds_home": 1.977085483489373,
+      "odds_draw": 3.5717130128643406,
+      "odds_away": 4.667939708704108,
+      "odds_over25": 2.235720005119367,
+      "odds_under25": 1.8092448093881937
+    },
+    "value": {
+      "has_value_data": true,
+      "bets": [
+        {
+          "market": "HOME",
+          "probability": 0.4594292200638218,
+          "odds": 1.977085483489373,
+          "implied_probability": 0.5057950242167033,
+          "edge": -0.046365804152881496,
+          "ev": -0.09166915832097333,
+          "is_value": false
+        },
+        {
+          "market": "DRAW",
+          "probability": 0.2728931880606505,
+          "odds": 3.5717130128643406,
+          "implied_probability": 0.2799777015673632,
+          "edge": -0.007084513506712686,
+          "ev": -0.025303849081738883,
+          "is_value": false
+        },
+        {
+          "market": "AWAY",
+          "probability": 0.2676775918755278,
+          "odds": 4.667939708704108,
+          "implied_probability": 0.21422727421593354,
+          "edge": 0.053450317659594265,
+          "ev": 0.2495028602460685,
+          "is_value": true
+        },
+        {
+          "market": "OVER_2_5",
+          "probability": 0.4606076461532106,
+          "odds": 2.235720005119367,
+          "implied_probability": 0.44728320080787987,
+          "edge": 0.013324445345330727,
+          "ev": 0.029789729015675448,
+          "is_value": false
+        },
+        {
+          "market": "UNDER_2_5",
+          "probability": 0.5393923538467894,
+          "odds": 1.8092448093881937,
+          "implied_probability": 0.5527167991921201,
+          "edge": -0.013324445345330727,
+          "ev": -0.024107183579016422,
+          "is_value": false
+        }
+      ],
+      "best_value": {
+        "market": "AWAY",
+        "probability": 0.2676775918755278,
+        "odds": 4.667939708704108,
+        "implied_probability": 0.21422727421593354,
+        "edge": 0.053450317659594265,
+        "ev": 0.2495028602460685,
+        "is_value": true
+      },
+      "best_edge": {
+        "market": "AWAY",
+        "probability": 0.2676775918755278,
+        "odds": 4.667939708704108,
+        "implied_probability": 0.21422727421593354,
+        "edge": 0.053450317659594265,
+        "ev": 0.2495028602460685,
+        "is_value": true
+      }
+    },
+    "match_id": "WC2026-012",
+    "date_utc": "2026-06-15T02:00:00+00:00",
+    "stage": "Group Stage",
+    "group": "F",
+    "venue": "TBD",
+    "city": "TBD",
+    "country": "TBD"
+  },
+  {
+    "home_team": "Spain",
+    "away_team": "Cape Verde",
+    "neutral": 1,
+    "lambda_home": 2.6581742510478152,
+    "lambda_away": 0.7007389348274433,
+    "market": {
+      "p_home": 0.8813892479126065,
+      "p_draw": 0.0813966124370582,
+      "p_away": 0.03721413965033527,
+      "overround_1x2": 0.0,
+      "p_over25": 0.6977213147812059,
+      "p_under25": 0.30227868521879414,
+      "overround_ou25": 0.0,
+      "lambda_total": 3.6,
+      "lambda_home": 2.875202737154267,
+      "lambda_away": 0.7247972628457329
+    },
+    "ml": {
+      "p_home": 0.8121986646130412,
+      "p_draw": 0.14526885102231654,
+      "p_away": 0.04253248436464228,
+      "p_over25": 0.5901997576837683,
+      "p_btts_yes": 0.44502187085169204,
+      "lambda_home": 2.3929172124732627,
+      "lambda_away": 0.6713343116939782
+    },
+    "dixon_coles": {
+      "p_home": 0.7825300275380698,
+      "p_draw": 0.14970266973301863,
+      "p_away": 0.06776730272891146,
+      "p_over25": 0.6522310304266574,
+      "p_under25": 0.3477689695733426,
+      "p_btts_yes": 0.47495258657671674,
+      "p_btts_no": 0.5250474134232832
+    },
+    "monte_carlo": {
+      "n_sim": 200000,
+      "home_win": 0.78229,
+      "draw": 0.150565,
+      "away_win": 0.067145,
+      "over25": 0.65228,
+      "under25": 0.34772,
+      "btts_yes": 0.475975,
+      "btts_no": 0.524025,
+      "avg_home_goals": 2.65765,
+      "avg_away_goals": 0.701535,
+      "avg_total_goals": 3.359185
+    },
+    "final": {
+      "p_home": 0.8324577386641245,
+      "p_draw": 0.12082841026588872,
+      "p_away": 0.04671385106998677,
+      "pick": "HOME",
+      "confidence": 0.8324577386641245
+    },
+    "top_scores": [
+      {
+        "score": "2-0",
+        "probability": 0.12286410753569463
+      },
+      {
+        "score": "3-0",
+        "probability": 0.1088647356764511
+      },
+      {
+        "score": "2-1",
+        "probability": 0.0860956638430871
+      },
+      {
+        "score": "1-0",
+        "probability": 0.0859646737653473
+      },
+      {
+        "score": "3-1",
+        "probability": 0.07628575891818751
+      },
+      {
+        "score": "4-0",
+        "probability": 0.0723453593055672
+      },
+      {
+        "score": "1-1",
+        "probability": 0.07125584802430791
+      },
+      {
+        "score": "4-1",
+        "probability": 0.050695210019491815
+      },
+      {
+        "score": "0-0",
+        "probability": 0.04125448542607161
+      },
+      {
+        "score": "5-0",
+        "probability": 0.03846131425777224
+      }
+    ],
+    "odds": {
+      "odds_home": 1.1345724971892943,
+      "odds_draw": 12.285523562461188,
+      "odds_away": 26.87150662076345,
+      "odds_over25": 1.4332369942196532,
+      "odds_under25": 3.308205470313542
+    },
+    "value": {
+      "has_value_data": true,
+      "bets": [
+        {
+          "market": "HOME",
+          "probability": 0.8324577386641245,
+          "odds": 1.1345724971892943,
+          "implied_probability": 0.8813892479126065,
+          "edge": -0.048931509248482,
+          "ev": -0.055516344639291226,
+          "is_value": false
+        },
+        {
+          "market": "DRAW",
+          "probability": 0.12082841026588872,
+          "odds": 12.285523562461188,
+          "implied_probability": 0.0813966124370582,
+          "edge": 0.03943179782883052,
+          "ev": 0.48444028133630335,
+          "is_value": true
+        },
+        {
+          "market": "AWAY",
+          "probability": 0.04671385106998677,
+          "odds": 26.87150662076345,
+          "implied_probability": 0.03721413965033527,
+          "edge": 0.009499711419651495,
+          "ev": 0.25527155830850723,
+          "is_value": false
+        },
+        {
+          "market": "OVER_2_5",
+          "probability": 0.6522310304266574,
+          "odds": 1.4332369942196532,
+          "implied_probability": 0.6977213147812059,
+          "edge": -0.045490284354548494,
+          "ev": -0.06519835841451038,
+          "is_value": false
+        },
+        {
+          "market": "UNDER_2_5",
+          "probability": 0.3477689695733426,
+          "odds": 3.308205470313542,
+          "implied_probability": 0.30227868521879414,
+          "edge": 0.04549028435454844,
+          "ev": 0.15049120754783574,
+          "is_value": true
+        }
+      ],
+      "best_value": {
+        "market": "DRAW",
+        "probability": 0.12082841026588872,
+        "odds": 12.285523562461188,
+        "implied_probability": 0.0813966124370582,
+        "edge": 0.03943179782883052,
+        "ev": 0.48444028133630335,
+        "is_value": true
+      },
+      "best_edge": {
+        "market": "UNDER_2_5",
+        "probability": 0.3477689695733426,
+        "odds": 3.308205470313542,
+        "implied_probability": 0.30227868521879414,
+        "edge": 0.04549028435454844,
+        "ev": 0.15049120754783574,
+        "is_value": true
+      }
+    },
+    "match_id": "WC2026-013",
+    "date_utc": "2026-06-15T16:00:00+00:00",
+    "stage": "Group Stage",
+    "group": "H",
+    "venue": "TBD",
+    "city": "TBD",
+    "country": "TBD"
+  },
+  {
+    "home_team": "Belgium",
+    "away_team": "Egypt",
+    "neutral": 1,
+    "lambda_home": 1.7315419110039145,
+    "lambda_away": 0.8887898952658139,
+    "market": {
+      "p_home": 0.5889714799986413,
+      "p_draw": 0.24239331669194705,
+      "p_away": 0.16863520330941176,
+      "overround_1x2": -1.1102230246251565e-16,
+      "p_over25": 0.4805884023093063,
+      "p_under25": 0.5194115976906938,
+      "overround_ou25": -1.1102230246251565e-16,
+      "lambda_total": 2.6,
+      "lambda_home": 1.7688239447037408,
+      "lambda_away": 0.8311760552962593
+    },
+    "ml": {
+      "p_home": 0.5810211382481226,
+      "p_draw": 0.24101506356799549,
+      "p_away": 0.1779637981838819,
+      "p_over25": 0.48513897473234874,
+      "p_btts_yes": 0.47104985190428905,
+      "lambda_home": 1.6859749809263485,
+      "lambda_away": 0.9592068107841583
+    },
+    "dixon_coles": {
+      "p_home": 0.5617619948270279,
+      "p_draw": 0.2584013262328181,
+      "p_away": 0.17983667894015387,
+      "p_over25": 0.4866614419649385,
+      "p_under25": 0.5133385580350616,
+      "p_btts_yes": 0.49581472950951194,
+      "p_btts_no": 0.5041852704904881
+    },
+    "monte_carlo": {
+      "n_sim": 200000,
+      "home_win": 0.562565,
+      "draw": 0.256575,
+      "away_win": 0.18086,
+      "over25": 0.48699,
+      "under25": 0.51301,
+      "btts_yes": 0.494935,
+      "btts_no": 0.505065,
+      "avg_home_goals": 1.73168,
+      "avg_away_goals": 0.889495,
+      "avg_total_goals": 2.621175
+    },
+    "final": {
+      "p_home": 0.5793864890930565,
+      "p_draw": 0.24591293048378177,
+      "p_away": 0.17470058042316183,
+      "pick": "HOME",
+      "confidence": 0.5793864890930565
+    },
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.12320550149269006
+      },
+      {
+        "score": "1-0",
+        "probability": 0.11481916092659639
+      },
+      {
+        "score": "2-0",
+        "probability": 0.10910416236993635
+      },
+      {
+        "score": "2-1",
+        "probability": 0.09697067704584007
+      },
+      {
+        "score": "0-0",
+        "probability": 0.0839793686467314
+      },
+      {
+        "score": "3-0",
+        "probability": 0.06297280993617367
+      },
+      {
+        "score": "3-1",
+        "probability": 0.055969597147765796
+      },
+      {
+        "score": "0-1",
+        "probability": 0.05348462278578574
+      },
+      {
+        "score": "1-2",
+        "probability": 0.049774456712663666
+      },
+      {
+        "score": "2-2",
+        "probability": 0.04309327894771363
+      }
+    ],
+    "odds": {
+      "odds_home": 1.6978750821725817,
+      "odds_draw": 4.125526287801411,
+      "odds_away": 5.929959939415502,
+      "odds_over25": 2.080782630614546,
+      "odds_under25": 1.925255432196748
+    },
+    "value": {
+      "has_value_data": true,
+      "bets": [
+        {
+          "market": "HOME",
+          "probability": 0.5793864890930565,
+          "odds": 1.6978750821725817,
+          "implied_probability": 0.5889714799986412,
+          "edge": -0.009584990905584734,
+          "ev": -0.01627411722144323,
+          "is_value": false
+        },
+        {
+          "market": "DRAW",
+          "probability": 0.24591293048378177,
+          "odds": 4.125526287801411,
+          "implied_probability": 0.24239331669194703,
+          "edge": 0.0035196137918347414,
+          "ev": 0.014520259221122656,
+          "is_value": false
+        },
+        {
+          "market": "AWAY",
+          "probability": 0.17470058042316183,
+          "odds": 5.929959939415502,
+          "implied_probability": 0.16863520330941173,
+          "edge": 0.006065377113750103,
+          "ev": 0.03596744330198587,
+          "is_value": false
+        },
+        {
+          "market": "OVER_2_5",
+          "probability": 0.4866614419649385,
+          "odds": 2.080782630614546,
+          "implied_probability": 0.4805884023093062,
+          "edge": 0.006073039655632273,
+          "ev": 0.012636675430472977,
+          "is_value": false
+        },
+        {
+          "market": "UNDER_2_5",
+          "probability": 0.5133385580350616,
+          "odds": 1.925255432196748,
+          "implied_probability": 0.5194115976906937,
+          "edge": -0.0060730396556321065,
+          "ev": -0.01169215258695211,
+          "is_value": false
+        }
+      ],
+      "best_value": null,
+      "best_edge": {
+        "market": "OVER_2_5",
+        "probability": 0.4866614419649385,
+        "odds": 2.080782630614546,
+        "implied_probability": 0.4805884023093062,
+        "edge": 0.006073039655632273,
+        "ev": 0.012636675430472977,
+        "is_value": false
+      }
+    },
+    "match_id": "WC2026-014",
+    "date_utc": "2026-06-15T19:00:00+00:00",
+    "stage": "Group Stage",
+    "group": "G",
+    "venue": "TBD",
+    "city": "TBD",
+    "country": "TBD"
+  },
+  {
+    "home_team": "Saudi Arabia",
+    "away_team": "Uruguay",
+    "neutral": 1,
+    "lambda_home": 0.79848898536543,
+    "lambda_away": 1.8103293409832122,
+    "market": {
+      "p_home": 0.12642819376321374,
+      "p_draw": 0.2238010135569816,
+      "p_away": 0.6497707926798046,
+      "overround_1x2": 0.0,
+      "p_over25": 0.4716676007605239,
+      "p_under25": 0.5283323992394762,
+      "overround_ou25": 0.0,
+      "lambda_total": 2.56,
+      "lambda_home": 0.7190342555148798,
+      "lambda_away": 1.8409657444851204
+    },
+    "ml": {
+      "p_home": 0.17431421074089407,
+      "p_draw": 0.23792716991257676,
+      "p_away": 0.5877586193465292,
+      "p_over25": 0.4184072750149574,
+      "p_btts_yes": 0.41533981543468035,
+      "lambda_home": 0.8956003218494359,
+      "lambda_away": 1.7728848478142132
+    },
+    "dixon_coles": {
+      "p_home": 0.1500283407431322,
+      "p_draw": 0.2465563134017592,
+      "p_away": 0.603415345855109,
+      "p_over25": 0.4837802566711448,
+      "p_under25": 0.5162197433288551,
+      "p_btts_yes": 0.4706547521213347,
+      "p_btts_no": 0.5293452478786653
+    },
+    "monte_carlo": {
+      "n_sim": 200000,
+      "home_win": 0.1495,
+      "draw": 0.24584,
+      "away_win": 0.60466,
+      "over25": 0.483995,
+      "under25": 0.516005,
+      "btts_yes": 0.471555,
+      "btts_no": 0.528445,
+      "avg_home_goals": 0.79841,
+      "avg_away_goals": 1.813275,
+      "avg_total_goals": 2.611685
+    },
+    "final": {
+      "p_home": 0.14908833645038147,
+      "p_draw": 0.2344339932426343,
+      "p_away": 0.6164776703069843,
+      "pick": "AWAY",
+      "confidence": 0.6164776703069843
+    },
+    "top_scores": [
+      {
+        "score": "0-1",
+        "probability": 0.12263735326418922
+      },
+      {
+        "score": "0-2",
+        "probability": 0.12063996802350299
+      },
+      {
+        "score": "1-1",
+        "probability": 0.11706450514713049
+      },
+      {
+        "score": "1-2",
+        "probability": 0.09632968566160482
+      },
+      {
+        "score": "0-0",
+        "probability": 0.08426395942647046
+      },
+      {
+        "score": "0-3",
+        "probability": 0.07279935793607466
+      },
+      {
+        "score": "1-3",
+        "probability": 0.05812948545363101
+      },
+      {
+        "score": "1-0",
+        "probability": 0.048143914094009886
+      },
+      {
+        "score": "2-1",
+        "probability": 0.04248850815329017
+      },
+      {
+        "score": "2-2",
+        "probability": 0.03845909648225282
+      }
+    ],
+    "odds": {
+      "odds_home": 7.909628147285654,
+      "odds_draw": 4.468255009691418,
+      "odds_away": 1.5390042323628756,
+      "odds_over25": 2.120137144013252,
+      "odds_under25": 1.8927478258753008
+    },
+    "value": {
+      "has_value_data": true,
+      "bets": [
+        {
+          "market": "HOME",
+          "probability": 0.14908833645038147,
+          "odds": 7.909628147285654,
+          "implied_probability": 0.12642819376321374,
+          "edge": 0.022660142687167734,
+          "ev": 0.17923330241993107,
+          "is_value": true
+        },
+        {
+          "market": "DRAW",
+          "probability": 0.2344339932426343,
+          "odds": 4.468255009691418,
+          "implied_probability": 0.2238010135569816,
+          "edge": 0.010632979685652716,
+          "ev": 0.047510864748364856,
+          "is_value": false
+        },
+        {
+          "market": "AWAY",
+          "probability": 0.6164776703069843,
+          "odds": 1.5390042323628756,
+          "implied_probability": 0.6497707926798046,
+          "edge": -0.03329312237282034,
+          "ev": -0.051238256240345725,
+          "is_value": false
+        },
+        {
+          "market": "OVER_2_5",
+          "probability": 0.4837802566711448,
+          "odds": 2.120137144013252,
+          "implied_probability": 0.4716676007605239,
+          "edge": 0.01211265591062094,
+          "ev": 0.025680491708758968,
+          "is_value": false
+        },
+        {
+          "market": "UNDER_2_5",
+          "probability": 0.5162197433288551,
+          "odds": 1.8927478258753008,
+          "implied_probability": 0.5283323992394762,
+          "edge": -0.01211265591062105,
+          "ev": -0.022926203140403723,
+          "is_value": false
+        }
+      ],
+      "best_value": {
+        "market": "HOME",
+        "probability": 0.14908833645038147,
+        "odds": 7.909628147285654,
+        "implied_probability": 0.12642819376321374,
+        "edge": 0.022660142687167734,
+        "ev": 0.17923330241993107,
+        "is_value": true
+      },
+      "best_edge": {
+        "market": "HOME",
+        "probability": 0.14908833645038147,
+        "odds": 7.909628147285654,
+        "implied_probability": 0.12642819376321374,
+        "edge": 0.022660142687167734,
+        "ev": 0.17923330241993107,
+        "is_value": true
+      }
+    },
+    "match_id": "WC2026-015",
+    "date_utc": "2026-06-15T22:00:00+00:00",
+    "stage": "Group Stage",
+    "group": "H",
+    "venue": "TBD",
+    "city": "TBD",
+    "country": "TBD"
+  }
+]
