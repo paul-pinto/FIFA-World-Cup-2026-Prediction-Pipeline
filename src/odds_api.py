@@ -385,14 +385,10 @@ def build_manual_odds_from_api(events: list[dict], target_date: str) -> pd.DataF
         if odds is None:
             continue
 
-        # Si la API trae local/visitante invertidos respecto a nuestro fixture, invertimos home/away.
-        if fixture.get("_reversed"):
-            odds["odds_home"], odds["odds_away"] = odds["odds_away"], odds["odds_home"]
-
-        # Para el predictor actual exigimos O/U. Si no hay totals, no escribimos esa fila.
+        # Si no hay totals 2.5, igual guardamos H2H.
+        # El predictor puede usar 1X2 de mercado y dejar Over/Under sin consenso.
         if odds.get("odds_over25") is None or odds.get("odds_under25") is None:
-            print(f"[WARN] Sin totals 2.5 para {fixture['match_id']}, se omite odds API")
-            continue
+            print(f"[WARN] Sin totals 2.5 para {fixture['match_id']}, se guarda solo H2H")
 
         rows.append({
             "match_id": fixture["match_id"],
