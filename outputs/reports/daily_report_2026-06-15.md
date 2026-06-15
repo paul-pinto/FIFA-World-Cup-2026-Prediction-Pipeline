@@ -4,57 +4,6 @@ Fecha: `2026-06-15`
 
 ---
 
-## Sweden vs Tunisia
-
-- Match ID: `WC2026-012`
-- Fecha UTC: `2026-06-15T02:00:00+00:00`
-- Sede: TBD - TBD, TBD
-
-### Final 1X2
-
-- Sweden: **45.9%**
-- Empate: **27.3%**
-- Tunisia: **26.8%**
-- Pick: **HOME** (45.9%)
-
-### Goles esperados
-
-- Sweden: `1.385`
-- Tunisia: `1.132`
-
-### Top scores
-
-1. `1-1` → **13.9%**
-2. `1-0` → **9.9%**
-3. `0-0` → **9.3%**
-4. `2-1` → **8.8%**
-5. `0-1` → **7.9%**
-
-### Mercados derivados
-
-- Over 2.5: **46.1%**
-- Under 2.5: **53.9%**
-- BTTS Sí: **52.1%**
-- BTTS No: **47.9%**
-
-### Value
-
-- Mejor value: **AWAY**
-- Cuota: `4.67`
-- Probabilidad modelo: **26.8%**
-- Edge: **+0.053**
-- EV: **+0.250**
-
-### Monte Carlo
-
-- Simulaciones: `200,000`
-- Sweden: **41.3%**
-- Empate: **29.2%**
-- Tunisia: **29.5%**
-- Goles promedio: `2.518`
-
----
-
 ## Spain vs Cape Verde
 
 - Match ID: `WC2026-013`
@@ -63,46 +12,46 @@ Fecha: `2026-06-15`
 
 ### Final 1X2
 
-- Spain: **83.2%**
-- Empate: **12.1%**
-- Cape Verde: **4.7%**
-- Pick: **HOME** (83.2%)
+- Spain: **84.3%**
+- Empate: **11.8%**
+- Cape Verde: **3.8%**
+- Pick: **HOME** (84.3%)
 
 ### Goles esperados
 
-- Spain: `2.658`
-- Cape Verde: `0.701`
+- Spain: `2.785`
+- Cape Verde: `0.721`
 
 ### Top scores
 
-1. `2-0` → **12.3%**
-2. `3-0` → **10.9%**
-3. `2-1` → **8.6%**
-4. `1-0` → **8.6%**
-5. `3-1` → **7.6%**
+1. `2-0` → **11.6%**
+2. `3-0` → **10.8%**
+3. `2-1` → **8.4%**
+4. `3-1` → **7.8%**
+5. `1-0` → **7.8%**
 
 ### Mercados derivados
 
-- Over 2.5: **65.2%**
-- Under 2.5: **34.8%**
-- BTTS Sí: **47.5%**
-- BTTS No: **52.5%**
+- Over 2.5: **68.0%**
+- Under 2.5: **32.0%**
+- BTTS Sí: **48.8%**
+- BTTS No: **51.2%**
 
 ### Value
 
 - Mejor value: **DRAW**
-- Cuota: `12.29`
-- Probabilidad modelo: **12.1%**
-- Edge: **+0.039**
-- EV: **+0.484**
+- Cuota: `14.30`
+- Probabilidad modelo: **11.8%**
+- Edge: **+0.048**
+- EV: **+0.690**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Spain: **78.2%**
-- Empate: **15.1%**
-- Cape Verde: **6.7%**
-- Goles promedio: `3.359`
+- Spain: **79.5%**
+- Empate: **14.1%**
+- Cape Verde: **6.4%**
+- Goles promedio: `3.505`
 
 ---
 
@@ -115,46 +64,45 @@ Fecha: `2026-06-15`
 ### Final 1X2
 
 - Belgium: **57.9%**
-- Empate: **24.6%**
-- Egypt: **17.5%**
+- Empate: **23.9%**
+- Egypt: **18.2%**
 - Pick: **HOME** (57.9%)
 
 ### Goles esperados
 
-- Belgium: `1.732`
-- Egypt: `0.889`
+- Belgium: `1.708`
+- Egypt: `0.892`
 
 ### Top scores
 
-1. `1-1` → **12.3%**
-2. `1-0` → **11.5%**
-3. `2-0` → **10.9%**
+1. `1-1` → **12.4%**
+2. `1-0` → **11.6%**
+3. `2-0` → **10.8%**
 4. `2-1` → **9.7%**
-5. `0-0` → **8.4%**
+5. `0-0` → **8.6%**
 
 ### Mercados derivados
 
-- Over 2.5: **48.7%**
-- Under 2.5: **51.3%**
-- BTTS Sí: **49.6%**
-- BTTS No: **50.4%**
+- Over 2.5: **48.2%**
+- Under 2.5: **51.8%**
+- BTTS Sí: **49.5%**
+- BTTS No: **50.5%**
 
 ### Value
 
-- No hay value claro según umbrales.
-- Mejor edge: **OVER_2_5**
-- Cuota: `2.08`
-- Probabilidad modelo: **48.7%**
-- Edge: **+0.006**
-- EV: **+0.013**
+- Mejor value: **AWAY**
+- Cuota: `6.24`
+- Probabilidad modelo: **18.2%**
+- Edge: **+0.021**
+- EV: **+0.133**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Belgium: **56.3%**
-- Empate: **25.7%**
-- Egypt: **18.1%**
-- Goles promedio: `2.621`
+- Belgium: **55.7%**
+- Empate: **25.9%**
+- Egypt: **18.4%**
+- Goles promedio: `2.599`
 
 ---
 
@@ -166,45 +114,92 @@ Fecha: `2026-06-15`
 
 ### Final 1X2
 
-- Saudi Arabia: **14.9%**
-- Empate: **23.4%**
-- Uruguay: **61.6%**
-- Pick: **AWAY** (61.6%)
+- Saudi Arabia: **15.1%**
+- Empate: **24.4%**
+- Uruguay: **60.5%**
+- Pick: **AWAY** (60.5%)
 
 ### Goles esperados
 
-- Saudi Arabia: `0.798`
-- Uruguay: `1.810`
+- Saudi Arabia: `0.784`
+- Uruguay: `1.851`
 
 ### Top scores
 
-1. `0-1` → **12.3%**
-2. `0-2` → **12.1%**
-3. `1-1` → **11.7%**
+1. `0-2` → **12.3%**
+2. `0-1` → **12.2%**
+3. `1-1` → **11.4%**
 4. `1-2` → **9.6%**
-5. `0-0` → **8.4%**
+5. `0-0` → **8.2%**
 
 ### Mercados derivados
 
-- Over 2.5: **48.4%**
-- Under 2.5: **51.6%**
-- BTTS Sí: **47.1%**
-- BTTS No: **52.9%**
+- Over 2.5: **49.1%**
+- Under 2.5: **50.9%**
+- BTTS Sí: **46.9%**
+- BTTS No: **53.1%**
 
 ### Value
 
 - Mejor value: **HOME**
-- Cuota: `7.91`
-- Probabilidad modelo: **14.9%**
-- Edge: **+0.023**
-- EV: **+0.179**
+- Cuota: `8.45`
+- Probabilidad modelo: **15.1%**
+- Edge: **+0.033**
+- EV: **+0.278**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Saudi Arabia: **14.9%**
-- Empate: **24.6%**
-- Uruguay: **60.5%**
-- Goles promedio: `2.612`
+- Saudi Arabia: **14.2%**
+- Empate: **24.0%**
+- Uruguay: **61.8%**
+- Goles promedio: `2.640`
+
+---
+
+## Iran vs New Zealand
+
+- Match ID: `WC2026-016`
+- Fecha UTC: `2026-06-16T01:00:00+00:00`
+- Sede: TBD - TBD, TBD
+
+### Final 1X2
+
+- Iran: **60.2%**
+- Empate: **23.6%**
+- New Zealand: **16.2%**
+- Pick: **HOME** (60.2%)
+
+### Goles esperados
+
+- Iran: `1.890`
+- New Zealand: `0.882`
+
+### Top scores
+
+1. `1-1` → **11.5%**
+2. `2-0` → **11.2%**
+3. `1-0` → **10.8%**
+4. `2-1` → **9.9%**
+5. `0-0` → **7.3%**
+
+### Mercados derivados
+
+- Over 2.5: **52.4%**
+- Under 2.5: **47.6%**
+- BTTS Sí: **50.8%**
+- BTTS No: **49.2%**
+
+### Value
+
+- Sin datos de cuotas.
+
+### Monte Carlo
+
+- Simulaciones: `200,000`
+- Iran: **60.3%**
+- Empate: **23.8%**
+- New Zealand: **16.0%**
+- Goles promedio: `2.771`
 
 ---
