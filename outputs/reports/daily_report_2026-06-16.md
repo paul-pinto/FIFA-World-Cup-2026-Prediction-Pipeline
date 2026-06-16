@@ -14,13 +14,13 @@ Fecha: `2026-06-16`
 
 - France: **65.0%**
 - Empate: **20.7%**
-- Senegal: **14.3%**
+- Senegal: **14.4%**
 - Pick: **HOME** (65.0%)
 
 ### Goles esperados
 
-- France: `1.909`
-- Senegal: `0.905`
+- France: `1.912`
+- Senegal: `0.908`
 
 ### Top scores
 
@@ -32,27 +32,27 @@ Fecha: `2026-06-16`
 
 ### Mercados derivados
 
-- Over 2.5: **53.4%**
-- Under 2.5: **46.6%**
-- BTTS Sí: **51.8%**
-- BTTS No: **48.2%**
+- Over 2.5: **53.5%**
+- Under 2.5: **46.5%**
+- BTTS Sí: **51.9%**
+- BTTS No: **48.1%**
 
 ### Value
 
 - No hay value claro según umbrales.
 - Mejor edge: **AWAY**
-- Cuota: `7.45`
-- Probabilidad modelo: **14.3%**
+- Cuota: `7.42`
+- Probabilidad modelo: **14.4%**
 - Edge: **+0.009**
-- EV: **+0.068**
+- EV: **+0.066**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
 - France: **60.1%**
 - Empate: **23.7%**
-- Senegal: **16.2%**
-- Goles promedio: `2.815`
+- Senegal: **16.3%**
+- Goles promedio: `2.820`
 
 ---
 
@@ -71,39 +71,39 @@ Fecha: `2026-06-16`
 
 ### Goles esperados
 
-- Iraq: `0.883`
-- Norway: `2.059`
+- Iraq: `0.884`
+- Norway: `2.063`
 
 ### Top scores
 
 1. `0-2` → **11.2%**
-2. `1-1` → **10.6%**
-3. `0-1` → **9.9%**
-4. `1-2` → **9.9%**
+2. `1-1` → **10.5%**
+3. `1-2` → **9.9%**
+4. `0-1` → **9.9%**
 5. `0-3` → **7.7%**
 
 ### Mercados derivados
 
-- Over 2.5: **56.4%**
-- Under 2.5: **43.6%**
-- BTTS Sí: **52.1%**
-- BTTS No: **47.9%**
+- Over 2.5: **56.5%**
+- Under 2.5: **43.5%**
+- BTTS Sí: **52.2%**
+- BTTS No: **47.8%**
 
 ### Value
 
 - Mejor value: **HOME**
-- Cuota: `14.55`
+- Cuota: `14.51`
 - Probabilidad modelo: **14.5%**
-- Edge: **+0.077**
-- EV: **+1.114**
+- Edge: **+0.076**
+- EV: **+1.108**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
 - Iraq: **14.3%**
-- Empate: **22.1%**
+- Empate: **22.0%**
 - Norway: **63.7%**
-- Goles promedio: `2.941`
+- Goles promedio: `2.946`
 
 ---
 
