@@ -63,47 +63,47 @@ Fecha: `2026-06-17`
 
 ### Final 1X2
 
-- Portugal: **71.5%**
-- Empate: **18.3%**
-- DR Congo: **10.2%**
-- Pick: **HOME** (71.5%)
+- Portugal: **72.2%**
+- Empate: **18.0%**
+- DR Congo: **9.8%**
+- Pick: **HOME** (72.2%)
 
 ### Goles esperados
 
-- Portugal: `2.023`
-- DR Congo: `0.734`
+- Portugal: `2.038`
+- DR Congo: `0.724`
 
 ### Top scores
 
-1. `2-0` → **13.0%**
+1. `2-0` → **13.1%**
 2. `1-0` → **11.9%**
-3. `1-1` → **10.4%**
+3. `1-1` → **10.3%**
 4. `2-1` → **9.5%**
-5. `3-0` → **8.8%**
+5. `3-0` → **8.9%**
 
 ### Mercados derivados
 
-- Over 2.5: **52.0%**
-- Under 2.5: **48.0%**
-- BTTS Sí: **46.1%**
-- BTTS No: **53.9%**
+- Over 2.5: **52.2%**
+- Under 2.5: **47.8%**
+- BTTS Sí: **45.8%**
+- BTTS No: **54.2%**
 
 ### Value
 
 - No hay value claro según umbrales.
-- Mejor edge: **UNDER_2_5**
-- Cuota: `2.16`
-- Probabilidad modelo: **48.0%**
-- Edge: **+0.017**
-- EV: **+0.036**
+- Mejor edge: **AWAY**
+- Cuota: `12.74`
+- Probabilidad modelo: **9.8%**
+- Edge: **+0.019**
+- EV: **+0.246**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Portugal: **66.8%**
-- Empate: **21.7%**
-- DR Congo: **11.5%**
-- Goles promedio: `2.756`
+- Portugal: **67.3%**
+- Empate: **21.4%**
+- DR Congo: **11.3%**
+- Goles promedio: `2.763`
 
 ---
 
@@ -115,46 +115,47 @@ Fecha: `2026-06-17`
 
 ### Final 1X2
 
-- England: **55.8%**
-- Empate: **25.6%**
-- Croatia: **18.6%**
-- Pick: **HOME** (55.8%)
+- England: **56.3%**
+- Empate: **25.5%**
+- Croatia: **18.2%**
+- Pick: **HOME** (56.3%)
 
 ### Goles esperados
 
-- England: `1.650`
-- Croatia: `0.891`
+- England: `1.684`
+- Croatia: `0.896`
 
 ### Top scores
 
-1. `1-1` → **12.7%**
-2. `1-0` → **11.8%**
+1. `1-1` → **12.6%**
+2. `1-0` → **11.6%**
 3. `2-0` → **10.7%**
 4. `2-1` → **9.6%**
-5. `0-0` → **9.0%**
+5. `0-0` → **8.7%**
 
 ### Mercados derivados
 
-- Over 2.5: **46.7%**
-- Under 2.5: **53.3%**
-- BTTS Sí: **48.8%**
-- BTTS No: **51.2%**
+- Over 2.5: **47.7%**
+- Under 2.5: **52.3%**
+- BTTS Sí: **49.3%**
+- BTTS No: **50.7%**
 
 ### Value
 
-- Mejor value: **OVER_2_5**
-- Cuota: `2.26`
-- Probabilidad modelo: **46.7%**
-- Edge: **+0.024**
-- EV: **+0.055**
+- No hay value claro según umbrales.
+- Mejor edge: **OVER_2_5**
+- Cuota: `2.16`
+- Probabilidad modelo: **47.7%**
+- Edge: **+0.014**
+- EV: **+0.031**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- England: **54.2%**
-- Empate: **26.7%**
-- Croatia: **19.1%**
-- Goles promedio: `2.542`
+- England: **54.9%**
+- Empate: **26.3%**
+- Croatia: **18.8%**
+- Goles promedio: `2.580`
 
 ---
 
@@ -166,46 +167,46 @@ Fecha: `2026-06-17`
 
 ### Final 1X2
 
-- Ghana: **37.3%**
-- Empate: **28.6%**
-- Panama: **34.1%**
-- Pick: **HOME** (37.3%)
+- Ghana: **36.2%**
+- Empate: **28.9%**
+- Panama: **34.9%**
+- Pick: **HOME** (36.2%)
 
 ### Goles esperados
 
-- Ghana: `1.261`
-- Panama: `1.277`
+- Ghana: `1.226`
+- Panama: `1.285`
 
 ### Top scores
 
-1. `1-1` → **14.0%**
-2. `0-0` → **9.2%**
-3. `0-1` → **8.8%**
+1. `1-1` → **14.1%**
+2. `0-0` → **9.4%**
+3. `0-1` → **9.2%**
 4. `1-0` → **8.7%**
-5. `1-2` → **8.1%**
+5. `1-2` → **8.2%**
 
 ### Mercados derivados
 
-- Over 2.5: **46.6%**
-- Under 2.5: **53.4%**
-- BTTS Sí: **53.0%**
-- BTTS No: **47.0%**
+- Over 2.5: **45.9%**
+- Under 2.5: **54.1%**
+- BTTS Sí: **52.4%**
+- BTTS No: **47.6%**
 
 ### Value
 
 - Mejor value: **AWAY**
-- Cuota: `3.58`
-- Probabilidad modelo: **34.1%**
-- Edge: **+0.062**
-- EV: **+0.223**
+- Cuota: `3.41`
+- Probabilidad modelo: **34.9%**
+- Edge: **+0.056**
+- EV: **+0.190**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Ghana: **34.8%**
-- Empate: **29.2%**
-- Panama: **35.9%**
-- Goles promedio: `2.543`
+- Ghana: **33.8%**
+- Empate: **29.3%**
+- Panama: **36.9%**
+- Goles promedio: `2.512`
 
 ---
 
