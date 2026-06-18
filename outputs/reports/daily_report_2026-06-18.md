@@ -12,46 +12,46 @@ Fecha: `2026-06-18`
 
 ### Final 1X2
 
-- Czechia: **49.4%**
+- Czechia: **49.2%**
 - Empate: **27.1%**
-- South Africa: **23.5%**
-- Pick: **HOME** (49.4%)
+- South Africa: **23.6%**
+- Pick: **HOME** (49.2%)
 
 ### Goles esperados
 
-- Czechia: `1.405`
-- South Africa: `0.945`
+- Czechia: `1.392`
+- South Africa: `0.941`
 
 ### Top scores
 
-1. `1-1` → **13.9%**
-2. `1-0` → **12.1%**
-3. `0-0` → **10.8%**
+1. `1-1` → **14.0%**
+2. `1-0` → **12.2%**
+3. `0-0` → **11.0%**
 4. `2-0` → **9.4%**
-5. `2-1` → **8.9%**
+5. `2-1` → **8.8%**
 
 ### Mercados derivados
 
-- Over 2.5: **41.7%**
-- Under 2.5: **58.3%**
-- BTTS Sí: **47.4%**
-- BTTS No: **52.6%**
+- Over 2.5: **41.3%**
+- Under 2.5: **58.7%**
+- BTTS Sí: **47.1%**
+- BTTS No: **52.9%**
 
 ### Value
 
 - Mejor value: **AWAY**
-- Cuota: `4.86`
-- Probabilidad modelo: **23.5%**
-- Edge: **+0.030**
-- EV: **+0.144**
+- Cuota: `4.82`
+- Probabilidad modelo: **23.6%**
+- Edge: **+0.029**
+- EV: **+0.139**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Czechia: **46.3%**
-- Empate: **29.6%**
-- South Africa: **24.1%**
-- Goles promedio: `2.351`
+- Czechia: **46.0%**
+- Empate: **29.8%**
+- South Africa: **24.2%**
+- Goles promedio: `2.335`
 
 ---
 
@@ -63,46 +63,46 @@ Fecha: `2026-06-18`
 
 ### Final 1X2
 
-- Switzerland: **65.1%**
+- Switzerland: **64.9%**
 - Empate: **21.2%**
-- Bosnia and Herzegovina: **13.7%**
-- Pick: **HOME** (65.1%)
+- Bosnia and Herzegovina: **13.8%**
+- Pick: **HOME** (64.9%)
 
 ### Goles esperados
 
-- Switzerland: `1.828`
-- Bosnia and Herzegovina: `0.821`
+- Switzerland: `1.827`
+- Bosnia and Herzegovina: `0.827`
 
 ### Top scores
 
-1. `1-0` → **11.9%**
-2. `2-0` → **11.8%**
+1. `1-0` → **11.8%**
+2. `2-0` → **11.7%**
 3. `1-1` → **11.7%**
 4. `2-1` → **9.7%**
 5. `0-0` → **8.1%**
 
 ### Mercados derivados
 
-- Over 2.5: **49.4%**
-- Under 2.5: **50.6%**
-- BTTS Sí: **48.0%**
-- BTTS No: **52.0%**
+- Over 2.5: **49.5%**
+- Under 2.5: **50.5%**
+- BTTS Sí: **48.3%**
+- BTTS No: **51.7%**
 
 ### Value
 
 - Mejor value: **HOME**
-- Cuota: `1.62`
-- Probabilidad modelo: **65.1%**
-- Edge: **+0.035**
-- EV: **+0.058**
+- Cuota: `1.63`
+- Probabilidad modelo: **64.9%**
+- Edge: **+0.037**
+- EV: **+0.060**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Switzerland: **60.3%**
+- Switzerland: **60.1%**
 - Empate: **24.3%**
-- Bosnia and Herzegovina: **15.4%**
-- Goles promedio: `2.650`
+- Bosnia and Herzegovina: **15.6%**
+- Goles promedio: `2.656`
 
 ---
 
@@ -115,45 +115,45 @@ Fecha: `2026-06-18`
 ### Final 1X2
 
 - Canada: **65.4%**
-- Empate: **24.8%**
-- Qatar: **9.8%**
+- Empate: **24.7%**
+- Qatar: **9.9%**
 - Pick: **HOME** (65.4%)
 
 ### Goles esperados
 
-- Canada: `1.990`
-- Qatar: `0.714`
+- Canada: `1.993`
+- Qatar: `0.717`
 
 ### Top scores
 
 1. `2-0` → **13.2%**
-2. `1-0` → **12.4%**
+2. `1-0` → **12.3%**
 3. `1-1` → **10.5%**
 4. `2-1` → **9.5%**
 5. `3-0` → **8.8%**
 
 ### Mercados derivados
 
-- Over 2.5: **50.7%**
-- Under 2.5: **49.3%**
-- BTTS Sí: **45.0%**
-- BTTS No: **55.0%**
+- Over 2.5: **50.9%**
+- Under 2.5: **49.1%**
+- BTTS Sí: **45.2%**
+- BTTS No: **54.8%**
 
 ### Value
 
 - Mejor value: **DRAW**
-- Cuota: `5.79`
-- Probabilidad modelo: **24.8%**
+- Cuota: `5.81`
+- Probabilidad modelo: **24.7%**
 - Edge: **+0.075**
-- EV: **+0.434**
+- EV: **+0.436**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Canada: **66.7%**
+- Canada: **66.6%**
 - Empate: **21.9%**
 - Qatar: **11.5%**
-- Goles promedio: `2.704`
+- Goles promedio: `2.709`
 
 ---
 
