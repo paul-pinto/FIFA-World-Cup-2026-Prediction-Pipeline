@@ -12,46 +12,46 @@ Fecha: `2026-06-22`
 
 ### Final 1X2
 
-- Argentina: **68.0%**
-- Empate: **20.7%**
-- Austria: **11.4%**
-- Pick: **HOME** (68.0%)
+- Argentina: **68.1%**
+- Empate: **20.6%**
+- Austria: **11.3%**
+- Pick: **HOME** (68.1%)
 
 ### Goles esperados
 
-- Argentina: `2.003`
+- Argentina: `2.008`
 - Austria: `0.786`
 
 ### Top scores
 
 1. `2-0` → **12.3%**
-2. `1-0` → **11.4%**
+2. `1-0` → **11.3%**
 3. `1-1` → **10.6%**
 4. `2-1` → **9.7%**
-5. `3-0` → **8.2%**
+5. `3-0` → **8.3%**
 
 ### Mercados derivados
 
-- Over 2.5: **52.8%**
-- Under 2.5: **47.2%**
-- BTTS Sí: **48.0%**
-- BTTS No: **52.0%**
+- Over 2.5: **52.9%**
+- Under 2.5: **47.1%**
+- BTTS Sí: **48.1%**
+- BTTS No: **51.9%**
 
 ### Value
 
 - Mejor value: **OVER_2_5**
 - Cuota: `2.04`
-- Probabilidad modelo: **52.8%**
-- Edge: **+0.039**
-- EV: **+0.079**
+- Probabilidad modelo: **52.9%**
+- Edge: **+0.038**
+- EV: **+0.077**
 
 ### Monte Carlo
 
 - Simulaciones: `200,000`
-- Argentina: **65.1%**
-- Empate: **22.2%**
-- Austria: **12.8%**
-- Goles promedio: `2.788`
+- Argentina: **65.2%**
+- Empate: **22.1%**
+- Austria: **12.7%**
+- Goles promedio: `2.793`
 
 ---
 
@@ -70,15 +70,15 @@ Fecha: `2026-06-22`
 
 ### Goles esperados
 
-- France: `2.576`
+- France: `2.575`
 - Iraq: `0.752`
 
 ### Top scores
 
 1. `2-0` → **11.9%**
 2. `3-0` → **10.2%**
-3. `2-1` → **8.9%**
-4. `1-0` → **8.6%**
+3. `2-1` → **9.0%**
+4. `1-0` → **8.5%**
 5. `3-1` → **7.7%**
 
 ### Mercados derivados
@@ -91,10 +91,10 @@ Fecha: `2026-06-22`
 ### Value
 
 - Mejor value: **AWAY**
-- Cuota: `29.97`
+- Cuota: `29.44`
 - Probabilidad modelo: **6.2%**
-- Edge: **+0.029**
-- EV: **+0.861**
+- Edge: **+0.028**
+- EV: **+0.837**
 
 ### Monte Carlo
 
