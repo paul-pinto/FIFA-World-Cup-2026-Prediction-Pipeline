@@ -65,10 +65,6 @@ def load_fixtures() -> pd.DataFrame:
 def filter_fixtures_by_date(df: pd.DataFrame, target_date: str) -> pd.DataFrame:
     """
     Filtra por fecha calendario Bolivia, no por fecha UTC.
-
-    Ejemplo:
-    Sweden vs Tunisia = 2026-06-15T02:00:00Z
-    En Bolivia es 2026-06-14 22:00, por tanto debe entrar en --date 2026-06-14.
     """
 
     target_date = pd.to_datetime(target_date).strftime("%Y-%m-%d")
@@ -82,7 +78,94 @@ def filter_fixtures_by_date(df: pd.DataFrame, target_date: str) -> pd.DataFrame:
 def _safe_get(d: Any, key: str, default=None):
     if isinstance(d, dict):
         return d.get(key, default)
+
     return default
+
+
+def _as_float(value):
+    if value is None:
+        return None
+
+    try:
+        value = float(value)
+    except Exception:
+        return None
+
+    if pd.isna(value):
+        return None
+
+    return value
+
+
+def estimate_btts(pred: dict) -> dict:
+    """
+    Estima Ambos Marcan Sí/No combinando:
+    - ML
+    - Dixon-Coles
+    - Monte Carlo
+    """
+
+    ml = pred.get("ml") or {}
+    dc = pred.get("dixon_coles") or {}
+    mc = pred.get("monte_carlo") or {}
+
+    candidates_yes = []
+
+    ml_yes = _as_float(_safe_get(ml, "p_btts_yes"))
+    dc_yes = _as_float(_safe_get(dc, "p_btts_yes"))
+    mc_yes = _as_float(_safe_get(mc, "p_btts_yes"))
+
+    if ml_yes is not None:
+        candidates_yes.append(("ml", ml_yes, 0.20))
+
+    if dc_yes is not None:
+        candidates_yes.append(("dc", dc_yes, 0.45))
+
+    if mc_yes is not None:
+        candidates_yes.append(("mc", mc_yes, 0.35))
+
+    if not candidates_yes:
+        return {
+            "final_btts_yes": None,
+            "final_btts_no": None,
+            "btts_pick": None,
+            "btts_confidence": None,
+            "btts_note": "No hay probabilidades BTTS disponibles.",
+        }
+
+    weighted_sum = sum(prob * weight for _, prob, weight in candidates_yes)
+    total_weight = sum(weight for _, _, weight in candidates_yes)
+
+    p_yes = weighted_sum / total_weight
+
+    dc_no = _as_float(_safe_get(dc, "p_btts_no"))
+
+    if dc_no is not None and dc_yes is not None:
+        dc_total = dc_yes + dc_no
+
+        if dc_total > 0:
+            dc_yes_norm = dc_yes / dc_total
+
+            # Mezcla suave: combinado + coherencia Dixon-Coles Sí/No.
+            p_yes = (p_yes * 0.70) + (dc_yes_norm * 0.30)
+
+    p_yes = max(0.0, min(1.0, p_yes))
+    p_no = 1.0 - p_yes
+
+    if p_yes >= p_no:
+        pick = "Sí"
+        confidence = p_yes
+    else:
+        pick = "No"
+        confidence = p_no
+
+    return {
+        "final_btts_yes": round(p_yes, 4),
+        "final_btts_no": round(p_no, 4),
+        "btts_pick": pick,
+        "btts_confidence": round(confidence, 4),
+        "btts_note": "BTTS final estimado combinando DC, Monte Carlo y ML.",
+    }
 
 
 def _top_scores_columns(pred: dict) -> dict:
@@ -98,12 +181,18 @@ def _top_scores_columns(pred: dict) -> dict:
             item = top_scores[i - 1]
 
             if isinstance(item, dict):
-                home_goals = item.get("home_goals", item.get("home", item.get("h")))
-                away_goals = item.get("away_goals", item.get("away", item.get("a")))
-                prob = item.get("prob", item.get("probability", item.get("p")))
+                # Formato real del proyecto:
+                # {"score": "1-1", "probability": 0.1338}
+                score = item.get("score")
+                prob = item.get("probability", item.get("prob", item.get("p")))
 
-                if home_goals is not None and away_goals is not None:
-                    score = f"{home_goals}-{away_goals}"
+                # Fallback por si viene separado
+                if score is None:
+                    home_goals = item.get("home_goals", item.get("home", item.get("h")))
+                    away_goals = item.get("away_goals", item.get("away", item.get("a")))
+
+                    if home_goals is not None and away_goals is not None:
+                        score = f"{home_goals}-{away_goals}"
 
             elif isinstance(item, (list, tuple)):
                 if len(item) >= 3:
@@ -117,6 +206,36 @@ def _top_scores_columns(pred: dict) -> dict:
         out[f"top_score_{i}_prob"] = prob
 
     return out
+
+
+def _value_columns(value: dict) -> dict:
+    if not isinstance(value, dict):
+        value = {}
+
+    best_value = value.get("best_value")
+    best_edge = value.get("best_edge")
+
+    if not isinstance(best_value, dict):
+        best_value = {}
+
+    if not isinstance(best_edge, dict):
+        best_edge = {}
+
+    return {
+        "has_value_data": bool(value.get("has_value_data", value)),
+
+        "best_value_market": best_value.get("market"),
+        "best_value_odds": best_value.get("odds"),
+        "best_value_probability": best_value.get("probability"),
+        "best_value_edge": best_value.get("edge"),
+        "best_value_ev": best_value.get("ev"),
+
+        "best_edge_market": best_edge.get("market"),
+        "best_edge_odds": best_edge.get("odds"),
+        "best_edge_probability": best_edge.get("probability"),
+        "best_edge": best_edge.get("edge"),
+        "best_edge_ev": best_edge.get("ev"),
+    }
 
 
 def flatten_prediction(pred: dict) -> dict:
@@ -181,6 +300,13 @@ def flatten_prediction(pred: dict) -> dict:
         "pick": _safe_get(final, "pick"),
         "confidence": _safe_get(final, "confidence"),
 
+        # Ambos marcan
+        "final_btts_yes": pred.get("final_btts_yes"),
+        "final_btts_no": pred.get("final_btts_no"),
+        "btts_pick": pred.get("btts_pick"),
+        "btts_confidence": pred.get("btts_confidence"),
+        "btts_note": pred.get("btts_note"),
+
         # Knockout / clasificación
         "knockout": pred.get("knockout"),
         "advance_available": pred.get("advance_available"),
@@ -191,17 +317,7 @@ def flatten_prediction(pred: dict) -> dict:
         "shootout_edge_home": pred.get("shootout_edge_home"),
         "advance_note": pred.get("advance_note"),
 
-        "has_value_data": bool(value),
-        "best_value_market": _safe_get(value, "best_value_market"),
-        "best_value_odds": _safe_get(value, "best_value_odds"),
-        "best_value_probability": _safe_get(value, "best_value_probability"),
-        "best_value_edge": _safe_get(value, "best_value_edge"),
-        "best_value_ev": _safe_get(value, "best_value_ev"),
-        "best_edge_market": _safe_get(value, "best_edge_market"),
-        "best_edge_odds": _safe_get(value, "best_edge_odds"),
-        "best_edge_probability": _safe_get(value, "best_edge_probability"),
-        "best_edge": _safe_get(value, "best_edge"),
-        "best_edge_ev": _safe_get(value, "best_edge_ev"),
+        **_value_columns(value),
     }
 
     row.update(_top_scores_columns(pred))
@@ -230,6 +346,7 @@ def predict_fixture(row) -> dict:
 
     pred["odds"] = odds
     pred["value"] = evaluate_value_bets(pred, odds)
+    pred.update(estimate_btts(pred))
 
     stage = str(row.get("stage", "")).strip()
     is_knockout = stage.lower() not in ["group stage", "group", "fase de grupos"]
@@ -312,12 +429,29 @@ def write_markdown_report(path: Path, target_date: str, rows: list[dict]) -> Non
         lines.append(f"- Confianza 90': {r.get('confidence')}")
         lines.append("")
 
+        lines.append("### Ambos marcan")
+        lines.append(f"- Sí: {r.get('final_btts_yes')}")
+        lines.append(f"- No: {r.get('final_btts_no')}")
+        lines.append(f"- Pick BTTS: {r.get('btts_pick')}")
+        lines.append(f"- Confianza BTTS: {r.get('btts_confidence')}")
+        lines.append("")
+
         if r.get("knockout"):
             lines.append("### Clasificación")
             lines.append(f"- Clasifica {r.get('home_team')}: {r.get('p_home_advance')}")
             lines.append(f"- Clasifica {r.get('away_team')}: {r.get('p_away_advance')}")
             lines.append(f"- Pick clasifica: {r.get('advance_team')}")
             lines.append(f"- Confianza clasificación: {r.get('advance_confidence')}")
+            lines.append("")
+
+        if r.get("top_score_1"):
+            lines.append("### Top scores")
+            for i in range(1, 6):
+                score = r.get(f"top_score_{i}")
+                prob = r.get(f"top_score_{i}_prob")
+
+                if score:
+                    lines.append(f"- {i}. {score}: {prob}")
             lines.append("")
 
         if r.get("best_value_market"):
@@ -327,6 +461,15 @@ def write_markdown_report(path: Path, target_date: str, rows: list[dict]) -> Non
             lines.append(f"- Probabilidad: {r.get('best_value_probability')}")
             lines.append(f"- Edge: {r.get('best_value_edge')}")
             lines.append(f"- EV: {r.get('best_value_ev')}")
+            lines.append("")
+        elif r.get("best_edge_market"):
+            lines.append("### Value")
+            lines.append("- Sin value claro")
+            lines.append(f"- Mejor edge: {r.get('best_edge_market')}")
+            lines.append(f"- Cuota: {r.get('best_edge_odds')}")
+            lines.append(f"- Probabilidad: {r.get('best_edge_probability')}")
+            lines.append(f"- Edge: {r.get('best_edge')}")
+            lines.append(f"- EV: {r.get('best_edge_ev')}")
             lines.append("")
 
         lines.append("---")
