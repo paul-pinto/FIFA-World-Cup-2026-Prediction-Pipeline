@@ -1,6 +1,6 @@
 # src/telegram_notify.py
+
 import argparse
-from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -59,8 +59,14 @@ def split_message(text: str) -> list[str]:
     return chunks
 
 
-def pct(x: float) -> str:
-    return f"{x * 100:.1f}%"
+def pct(x) -> str:
+    if pd.isna(x):
+        return "N/A"
+
+    try:
+        return f"{float(x) * 100:.1f}%"
+    except Exception:
+        return "N/A"
 
 
 def load_predictions(date_str: str) -> pd.DataFrame:
@@ -72,11 +78,21 @@ def load_predictions(date_str: str) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+def _is_true(value) -> bool:
+    if isinstance(value, bool):
+        return value
+
+    if pd.isna(value):
+        return False
+
+    return str(value).strip().lower() in ["true", "1", "yes", "y", "si", "sí"]
+
+
 def format_predictions_message(date_str: str) -> str:
     df = load_predictions(date_str)
 
     lines = []
-    lines.append(f"🏆 <b>World Cup 2026 · Pronósticos</b>")
+    lines.append("🏆 <b>World Cup 2026 · Pronósticos</b>")
     lines.append(f"📅 <b>{date_str}</b>")
     lines.append("")
 
@@ -85,44 +101,79 @@ def format_predictions_message(date_str: str) -> str:
         away = row["away_team"]
 
         lines.append(f"⚽ <b>{home} vs {away}</b>")
-        lines.append(f"🏟 {row.get('venue', '')} · {row.get('city', '')}")
+
+        venue = row.get("venue", "")
+        city = row.get("city", "")
+
+        if pd.notna(venue) or pd.notna(city):
+            lines.append(f"🏟 {venue} · {city}")
 
         lines.append("")
-        lines.append("1X2:")
-        lines.append(f"• {home}: <b>{pct(row['final_p_home'])}</b>")
-        lines.append(f"• Empate: <b>{pct(row['final_p_draw'])}</b>")
-        lines.append(f"• {away}: <b>{pct(row['final_p_away'])}</b>")
-        lines.append(f"🎯 Pick: <b>{row['pick']}</b> ({pct(row['confidence'])})")
+        lines.append("1X2 90 minutos:")
+        lines.append(f"• {home}: <b>{pct(row.get('final_p_home'))}</b>")
+        lines.append(f"• Empate: <b>{pct(row.get('final_p_draw'))}</b>")
+        lines.append(f"• {away}: <b>{pct(row.get('final_p_away'))}</b>")
+        lines.append(f"🎯 Pick 90': <b>{row.get('pick')}</b> ({pct(row.get('confidence'))})")
+
+        # Knockout / clasificación
+        is_knockout = _is_true(row.get("knockout", False))
+        advance_team = row.get("advance_team", None)
+        advance_confidence = row.get("advance_confidence", None)
+        p_home_advance = row.get("p_home_advance", None)
+        p_away_advance = row.get("p_away_advance", None)
+
+        if (
+            is_knockout
+            and pd.notna(advance_team)
+            and str(advance_team).strip() != ""
+            and pd.notna(advance_confidence)
+        ):
+            lines.append("")
+            lines.append("🏆 Clasificación")
+            lines.append(
+                f"• Pick clasifica: <b>{advance_team}</b> "
+                f"({pct(advance_confidence)})"
+            )
+
+            if pd.notna(p_home_advance) and pd.notna(p_away_advance):
+                lines.append(
+                    f"• {home}: <b>{pct(p_home_advance)}</b> | "
+                    f"{away}: <b>{pct(p_away_advance)}</b>"
+                )
 
         lines.append("")
         lines.append("Top scores:")
+
         for i in range(1, 6):
             s_col = f"top_score_{i}"
             p_col = f"top_score_{i}_prob"
+
             if s_col in row and p_col in row and pd.notna(row[s_col]):
                 lines.append(f"{i}. {row[s_col]} · <b>{pct(row[p_col])}</b>")
 
         lines.append("")
         lines.append("Mercados:")
-        lines.append(f"• Over 2.5: <b>{pct(row['dc_p_over25'])}</b>")
-        lines.append(f"• Under 2.5: <b>{pct(row['dc_p_under25'])}</b>")
-        lines.append(f"• BTTS Sí: <b>{pct(row['dc_p_btts_yes'])}</b>")
+        lines.append(f"• Over 2.5: <b>{pct(row.get('dc_p_over25'))}</b>")
+        lines.append(f"• Under 2.5: <b>{pct(row.get('dc_p_under25'))}</b>")
+        lines.append(f"• BTTS Sí: <b>{pct(row.get('dc_p_btts_yes'))}</b>")
 
         best_value = row.get("best_value_market", None)
+
         if pd.notna(best_value):
             lines.append("")
             lines.append("💰 Value:")
             lines.append(f"• Mercado: <b>{best_value}</b>")
-            lines.append(f"• EV: <b>{row['best_value_ev']:+.3f}</b>")
-            lines.append(f"• Edge: <b>{row['best_value_edge']:+.3f}</b>")
+            lines.append(f"• EV: <b>{row.get('best_value_ev'):+.3f}</b>")
+            lines.append(f"• Edge: <b>{row.get('best_value_edge'):+.3f}</b>")
         else:
             best_edge = row.get("best_edge_market", None)
+
             if pd.notna(best_edge):
                 lines.append("")
                 lines.append("💰 Value:")
                 lines.append("• Sin value claro")
                 lines.append(f"• Mejor edge: <b>{best_edge}</b>")
-                lines.append(f"• EV: <b>{row['best_edge_ev']:+.3f}</b>")
+                lines.append(f"• EV: <b>{row.get('best_edge_ev'):+.3f}</b>")
 
         lines.append("")
         lines.append("—")
@@ -170,12 +221,12 @@ def send_status():
 
     if pred_files:
         lines.append("")
-        lines.append(f"Última predicción:")
+        lines.append("Última predicción:")
         lines.append(f"<code>{pred_files[-1].name}</code>")
 
     if eval_files:
         lines.append("")
-        lines.append(f"Última evaluación:")
+        lines.append("Última evaluación:")
         lines.append(f"<code>{eval_files[-1].name}</code>")
 
     send_telegram_message("\n".join(lines))
