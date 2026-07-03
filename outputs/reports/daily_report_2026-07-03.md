@@ -7,37 +7,37 @@
 - Kickoff Bolivia: 2026-07-03T14:00:00-04:00
 
 ### 90 minutos
-- Local: 0.3340803471726156
-- Empate: 0.3191069471114729
-- Visitante: 0.34681270571591155
+- Local: 0.3313602925900183
+- Empate: 0.31703826656067935
+- Visitante: 0.3516014408493024
 - Pick 90': AWAY
-- Confianza 90': 0.34681270571591155
+- Confianza 90': 0.3516014408493024
 
 ### Ambos marcan
-- Sí: 0.4676
-- No: 0.5324
+- Sí: 0.4723
+- No: 0.5277
 - Pick BTTS: No
-- Confianza BTTS: 0.5324
+- Confianza BTTS: 0.5277
 
 ### Clasificación
-- Clasifica Australia: 0.4921
-- Clasifica Egypt: 0.5079
+- Clasifica Australia: 0.4875
+- Clasifica Egypt: 0.5125
 - Pick clasifica: Egypt
-- Confianza clasificación: 0.5079
+- Confianza clasificación: 0.5125
 
 ### Top scores
-- 1. 1-1: 0.14732019861386042
-- 2. 0-0: 0.1230391373034503
-- 3. 0-1: 0.10900958996960562
-- 4. 1-0: 0.10657769480529064
-- 5. 1-2: 0.0747540924392956
+- 1. 1-1: 0.146880716213215
+- 2. 0-0: 0.12002499200523789
+- 3. 0-1: 0.10813529719540207
+- 4. 1-0: 0.10389094233519355
+- 5. 1-2: 0.07603692634516843
 
 ### Value
 - Mejor value: HOME
-- Cuota: 3.715247066712168
-- Probabilidad: 0.3340803471726156
-- Edge: 0.06491924374027874
-- EV: 0.2411910298792428
+- Cuota: 3.7823832468864342
+- Probabilidad: 0.3313602925900183
+- Edge: 0.06697671886750473
+- EV: 0.25333161937587234
 
 ---
 
@@ -48,37 +48,37 @@
 - Kickoff Bolivia: 2026-07-03T18:00:00-04:00
 
 ### 90 minutos
-- Local: 0.8124514972114623
-- Empate: 0.13652521533949064
-- Visitante: 0.05102328744904718
+- Local: 0.8133974946989725
+- Empate: 0.13618099842649606
+- Visitante: 0.05042150687453149
 - Pick 90': HOME
-- Confianza 90': 0.8124514972114623
+- Confianza 90': 0.8133974946989725
 
 ### Ambos marcan
-- Sí: 0.4237
-- No: 0.5763
+- Sí: 0.4219
+- No: 0.5781
 - Pick BTTS: No
-- Confianza BTTS: 0.5763
+- Confianza BTTS: 0.5781
 
 ### Clasificación
-- Clasifica Argentina: 0.8944
-- Clasifica Cape Verde: 0.1056
+- Clasifica Argentina: 0.8951
+- Clasifica Cape Verde: 0.1049
 - Pick clasifica: Argentina
-- Confianza clasificación: 0.8944
+- Confianza clasificación: 0.8951
 
 ### Top scores
-- 1. 2-0: 0.13939788076997844
-- 2. 3-0: 0.11119017189923383
-- 3. 1-0: 0.10917444495320465
-- 4. 2-1: 0.0877403016731612
-- 5. 1-1: 0.08066596230396811
+- 1. 2-0: 0.1401208339547183
+- 2. 3-0: 0.11144172524338926
+- 3. 1-0: 0.11010824099104882
+- 4. 2-1: 0.08762933849127029
+- 5. 1-1: 0.08079897397872235
 
 ### Value
 - Mejor value: DRAW
-- Cuota: 8.705874136575439
-- Probabilidad: 0.13652521533949064
-- Edge: 0.021660242068310062
-- EV: 0.18857134121446384
+- Cuota: 8.789959244480748
+- Probabilidad: 0.13618099842649606
+- Edge: 0.022414828164909903
+- EV: 0.19702542604159734
 
 ---
 
