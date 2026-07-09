@@ -7,36 +7,36 @@
 - Kickoff Bolivia: 2026-07-09T16:00:00-04:00
 
 ### 90 minutos
-- Local: 0.596188779087049
-- Empate: 0.22135186672970952
-- Visitante: 0.18245935418324152
+- Local: 0.5944620580902702
+- Empate: 0.22321850687816333
+- Visitante: 0.18231943503156645
 - Pick 90': HOME
-- Confianza 90': 0.596188779087049
+- Confianza 90': 0.5944620580902702
 
 ### Ambos marcan
-- Sí: 0.4894
-- No: 0.5106
+- Sí: 0.4865
+- No: 0.5135
 - Pick BTTS: No
-- Confianza BTTS: 0.5106
+- Confianza BTTS: 0.5135
 
 ### Clasificación
-- Clasifica France: 0.729
-- Clasifica Morocco: 0.271
+- Clasifica France: 0.7284
+- Clasifica Morocco: 0.2716
 - Pick clasifica: France
-- Confianza clasificación: 0.729
+- Confianza clasificación: 0.7284
 
 ### Top scores
-- 1. 1-1: 0.12233711428089095
-- 2. 1-0: 0.11348132949894325
-- 3. 2-0: 0.10898123131109319
-- 4. 2-1: 0.09727229402515546
-- 5. 0-0: 0.0823534498539654
+- 1. 1-1: 0.12304626182473591
+- 2. 1-0: 0.1150611971726274
+- 3. 2-0: 0.10944218900321816
+- 4. 2-1: 0.09697028748092824
+- 5. 0-0: 0.08400237072039436
 
 ### Value
 - Mejor value: AWAY
-- Cuota: 6.712175361857772
-- Probabilidad: 0.18245935418324152
-- Edge: 0.03347635745128136
-- EV: 0.22469918168923453
+- Cuota: 6.73899835190879
+- Probabilidad: 0.18231943503156645
+- Edge: 0.03392942990317008
+- EV: 0.2286503721986679
 
 ---
